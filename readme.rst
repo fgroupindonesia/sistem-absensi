@@ -1,6 +1,6 @@
-###################
+*******************
 What is Sistem Absensi
-###################
+*******************
 
 Sistem Absensi is purely web portal that developed under php code mixed with several html, css, and jquery scripts. 
 
