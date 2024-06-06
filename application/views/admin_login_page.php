@@ -4,9 +4,10 @@
 <head>
 	<title>Login - Sistem Absensi</title>
    <!--Made with love by Mutiullah Samim -->
+
+	<script src="/js/jquery-3.3.1.min.js"></script>
    <link href="/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 	<script src="/js/bootstrap.min.js"></script>
-<script src="/js/jquery-3.3.1.min.js"></script>
 
 	
     

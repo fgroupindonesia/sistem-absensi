@@ -1,0 +1,18 @@
+{
+    "name": "Sistem Absensi",
+    "short_name": "Sistem Absensi",
+    "theme_color": "#ffcbe4",
+    "background_color": "#fa99ca",
+    "display": "standalone",
+    "scope": "http://192.168.0.11/portal",
+    "start_url": "http://192.168.0.11/portal",
+    "description": "Web Portal for Attendance System - FGroupIndonesia",
+    "orientation": "any",
+    "icons": [
+        {
+            "src": "http://192.168.0.11/images/favicon.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ]
+}

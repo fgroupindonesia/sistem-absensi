@@ -24,3 +24,4 @@ $route['staff/add'] = 'Works/add_staff';
 $route['staff/delete'] = 'Works/delete_staff';
 $route['staff/edit'] = 'Works/edit_staff';
 $route['staff/update'] = 'Works/update_staff';
+$route['install'] = 'Welcome/install';

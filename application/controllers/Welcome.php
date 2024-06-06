@@ -14,6 +14,11 @@ class Welcome extends CI_Controller {
 		$this->load->view('landing_page');
 	}
 
+	public function install()
+	{
+		$this->load->view('install_app');
+	}
+
 	public function register_page()
 	{
 		$tipe = $this->input->get('type');
