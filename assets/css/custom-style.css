@@ -1,0 +1,11 @@
+ .hidden {
+    display: none;
+  }
+
+  .table-responsive {
+  overflow-x: visible !important ;
+}
+
+.inner-button{
+   margin:5px;
+}

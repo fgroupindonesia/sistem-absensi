@@ -159,6 +159,18 @@ class Welcome extends CI_Controller {
 
 		$data = array();
 
+		$tk = $this->akses->getPublicToken();
+		$data['public_token'] = $tk;
+
+		$dataStaff = $this->DBClient->getAllStaffByToken($tk);
+
+		if(is_array($dataStaff)){
+			$data['total_staff'] = count($dataStaff);
+		}else{
+			$data['total_staff'] = 0;
+		}
+
+
 		if(isset($akun)){
 
 			if($akun == 'ultimate'){

@@ -7,20 +7,20 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <title>My Account - Settings - Sistem Absensi Digital.</title>
     <!-- CSS files -->
-    <link href="/css/tabler.min.css<?=$rnum?>" rel="stylesheet"/>
-    <link href="/css/tabler-flags.min.css<?=$rnum?>" rel="stylesheet"/>
-    <link href="/css/tabler-payments.min.css<?=$rnum?>" rel="stylesheet"/>
-    <link href="/css/tabler-vendors.min.css<?=$rnum?>" rel="stylesheet"/>
-    <link href="/css/demo.min.css<?=$rnum?>" rel="stylesheet"/>
+    <link href="/assets/css/tabler.min.css<?=$rnum?>" rel="stylesheet"/>
+    <link href="/assets/css/tabler-flags.min.css<?=$rnum?>" rel="stylesheet"/>
+    <link href="/assets/css/tabler-payments.min.css<?=$rnum?>" rel="stylesheet"/>
+    <link href="/assets/css/tabler-vendors.min.css<?=$rnum?>" rel="stylesheet"/>
+    <link href="/assets/css/demo.min.css<?=$rnum?>" rel="stylesheet"/>
     <style>
-      @import url('/css/inter.css');
+      @import url('/assets/css/inter.css');
       :root {
       	--tblr-font-sans-serif: Inter, -apple-system, BlinkMacSystemFont, San Francisco, Segoe UI, Roboto, Helvetica Neue, sans-serif;
       }
     </style>
   </head>
   <body >
-    <script src="/js/demo-theme.min.js<?=$rnum?>"></script>
+    <script src="/assets/js/demo-theme.min.js<?=$rnum?>"></script>
     <div class="page">
       <!-- Navbar -->
        <?php include('header.php'); ?>
@@ -51,7 +51,7 @@
                     <h2 class="mb-4">My Account</h2>
                     <h3 class="card-title">Profile Details</h3>
                     <div class="row align-items-center">
-                      <div class="col-auto"><img class="avatar avatar-xl" src="/images/avatars/<?= $this->akses->getAvatar() ;?>" >
+                      <div class="col-auto"><img class="avatar avatar-xl" src="/assets/img/avatars/<?= $this->akses->getAvatar() ;?>" >
                       </div>
                       <div class="col-auto"><a href="#" class="btn">
                           Change avatar
@@ -151,7 +151,7 @@
     </div>
      <!-- Libs JS -->
     <!-- Tabler Core -->
-    <script src="/js/tabler.min.js<?=$rnum?>" defer></script>
-    <script src="/js/demo.min.js<?=$rnum?>" defer></script>
+    <script src="/assets/js/tabler.min.js<?=$rnum?>" defer></script>
+    <script src="/assets/js/demo.min.js<?=$rnum?>" defer></script>
   </body>
 </html>

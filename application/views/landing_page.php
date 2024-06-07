@@ -10,22 +10,22 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="/images/favicon.ico" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="/assets/img/favicon.ico" rel="icon">
+  <link href="/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
-  <link href="assets/css/fonts-googleapis.css" rel="stylesheet">
+  <link href="/assets/css/fonts-googleapis.css" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="/assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="/assets/css/style-landing-page.css" rel="stylesheet">
 
  </head>
 
@@ -84,7 +84,7 @@
           </div>
         </div>
         <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="fade-left">
-          <img src="assets/img/hero-img.png" class="img-fluid" alt="">
+          <img src="/assets/img/hero-img.png" class="img-fluid" alt="">
         </div>
       </div>
     </div>
@@ -99,7 +99,7 @@
 
         <div class="row">
           <div class="col-lg-6" data-aos="zoom-in">
-            <img src="assets/img/about.jpg" class="img-fluid" alt="">
+            <img src="/assets/img/about.jpg" class="img-fluid" alt="">
           </div>
           <div class="col-lg-6 d-flex flex-column justify-contents-center" data-aos="fade-left">
             <div class="content pt-4 pt-lg-0">
@@ -159,22 +159,22 @@
             <div class="tab-content">
               <div class="tab-pane active show" id="tab-1">
                 <figure>
-                  <img src="assets/img/features-1.png" alt="" class="img-fluid">
+                  <img src="/assets/img/features-1.png" alt="" class="img-fluid">
                 </figure>
               </div>
               <div class="tab-pane" id="tab-2">
                 <figure>
-                  <img src="assets/img/features-2.png" alt="" class="img-fluid">
+                  <img src="/assets/img/features-2.png" alt="" class="img-fluid">
                 </figure>
               </div>
               <div class="tab-pane" id="tab-3">
                 <figure>
-                  <img src="assets/img/features-3.png" alt="" class="img-fluid">
+                  <img src="/assets/img/features-3.png" alt="" class="img-fluid">
                 </figure>
               </div>
               <div class="tab-pane" id="tab-4">
                 <figure>
-                  <img src="assets/img/features-4.png" alt="" class="img-fluid">
+                  <img src="/assets/img/features-4.png" alt="" class="img-fluid">
                 </figure>
               </div>
             </div>
@@ -269,9 +269,9 @@
                   Sistem absensi web ini telah membawa transparansi dalam proses absensi. Karyawan dapat dengan mudah mengakses dan memverifikasi catatan absensi mereka sendiri, menciptakan lingkungan kerja yang lebih terbuka dan akuntabel.
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
-                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+                <img src="/assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
                 <h3>Kartinah Sari</h3>
-                <h4>OLShop Kartina</h4>
+                <h4>OLShop Kartinah</h4>
               </div>
             </div><!-- End testimonial item -->
 
@@ -282,8 +282,8 @@
                   Fitur integrasi dengan sistem lainnya membuat manajemen sumber daya manusia menjadi lebih efisien. Sistem ini secara otomatis menyinkronkan data absensi dengan platform lainnya, menghemat waktu dan mengurangi risiko kesalahan manusiawi.
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
-                <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-                <h3>Nina Nihonggo</h3>
+                <img src="/assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+                <h3>Nina Safitri</h3>
                 <h4>Freelancer UpWork</h4>
               </div>
             </div><!-- End testimonial item -->
@@ -295,7 +295,7 @@
                   Sebagai pengguna baru, saya sangat senang dengan dukungan pelanggan yang diberikan. Tim dukungan sangat responsif dan membantu kami dengan setiap pertanyaan atau kendala yang kami hadapi selama implementasi.
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
-                <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
+                <img src="/assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
                 <h3>Iwan Saputra</h3>
                 <h4>Karyawan Wiraswasta</h4>
               </div>
@@ -308,7 +308,7 @@
                  Saya terkesan dengan fitur pelaporan yang canggih. Dengan sistem ini, kami dapat dengan mudah menganalisis data absensi, memonitor keterlambatan, dan membuat keputusan strategis untuk meningkatkan manajemen karyawan.
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
-                <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
+                <img src="/assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
                 <h3>Pa Ahmat Sandi</h3>
                 <h4>CV. Bangunan Tegas</h4>
               </div>
@@ -321,7 +321,7 @@
                   Pilihan sistem absensi web ini memberikan fleksibilitas luar biasa. Kami dapat mengaksesnya dari mana saja, memudahkan kami untuk melacak absensi karyawan bahkan saat bepergian.
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
-                <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
+                <img src="/assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
                 <h3>Joni Kurniawan</h3>
                 <h4>Entrepreneur</h4>
               </div>
@@ -347,7 +347,7 @@
 
           <div class="col-lg-4 col-md-6">
             <div class="member" data-aos="zoom-in">
-              <div class="pic"><img src="assets/img/team/team-1.jpg" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="/assets/img/team/team-1.jpg" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>Triawan Munaf</h4>
                 <span>Head of Bekraf</span>
@@ -363,7 +363,7 @@
 
           <div class="col-lg-4 col-md-6">
             <div class="member" data-aos="zoom-in" data-aos-delay="100">
-              <div class="pic"><img src="assets/img/team/team-2.jpg" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="/assets/img/team/team-2.jpg" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>Pevita Pearce</h4>
                 <span>Artist</span>
@@ -379,7 +379,7 @@
 
           <div class="col-lg-4 col-md-6">
             <div class="member" data-aos="zoom-in" data-aos-delay="200">
-              <div class="pic"><img src="assets/img/team/team-3.jpg" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="/assets/img/team/team-3.jpg" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>Benny Moza</h4>
                 <span>Content Creator</span>
@@ -410,49 +410,49 @@
 
           <div class="col-lg-3 col-md-4 col-xs-6">
             <div class="client-logo" data-aos="zoom-in">
-              <img src="assets/img/clients/client-1.png" class="img-fluid" alt="">
+              <img src="/assets/img/clients/client-1.png" class="img-fluid" alt="">
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4 col-xs-6">
             <div class="client-logo" data-aos="zoom-in" data-aos-delay="100">
-              <img src="assets/img/clients/client-2.png" class="img-fluid" alt="">
+              <img src="/assets/img/clients/client-2.png" class="img-fluid" alt="">
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4 col-xs-6">
             <div class="client-logo" data-aos="zoom-in" data-aos-delay="150">
-              <img src="assets/img/clients/client-3.png" class="img-fluid" alt="">
+              <img src="/assets/img/clients/client-3.png" class="img-fluid" alt="">
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4 col-xs-6">
             <div class="client-logo" data-aos="zoom-in" data-aos-delay="200">
-              <img src="assets/img/clients/client-4.png" class="img-fluid" alt="">
+              <img src="/assets/img/clients/client-4.png" class="img-fluid" alt="">
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4 col-xs-6">
             <div class="client-logo" data-aos="zoom-in" data-aos-delay="250">
-              <img src="assets/img/clients/client-5.png" class="img-fluid" alt="">
+              <img src="/assets/img/clients/client-5.png" class="img-fluid" alt="">
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4 col-xs-6">
             <div class="client-logo" data-aos="zoom-in" data-aos-delay="300">
-              <img src="assets/img/clients/client-6.png" class="img-fluid" alt="">
+              <img src="/assets/img/clients/client-6.png" class="img-fluid" alt="">
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4 col-xs-6">
             <div class="client-logo" data-aos="zoom-in" data-aos-delay="350">
-              <img src="assets/img/clients/client-7.png" class="img-fluid" alt="">
+              <img src="/assets/img/clients/client-7.png" class="img-fluid" alt="">
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4 col-xs-6" data-aos="zoom-in" data-aos-delay="400">
             <div class="client-logo">
-              <img src="assets/img/clients/client-8.png" class="img-fluid" alt="">
+              <img src="/assets/img/clients/client-8.png" class="img-fluid" alt="">
             </div>
           </div>
 
@@ -773,16 +773,16 @@ Ujung Berung,<br>Bandung 40614, Jawa Barat.</p>
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="/assets/vendor/aos/aos.js"></script>
+  <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="/assets/vendor/swiper/swiper-bundle.min.js"></script>
 
   <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
-  <script src="assets/js/jquery-3.7.1.min.js"></script>
-  <script src="assets/js/landing-page.js"></script>
+  <script src="/assets/js/main.js"></script>
+  <script src="/assets/js/jquery-3.7.1.min.js"></script>
+  <script src="/assets/js/landing-page.js"></script>
 
 </body>
 

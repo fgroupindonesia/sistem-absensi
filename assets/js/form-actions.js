@@ -9,10 +9,35 @@ $(document).ready(function(){
 		//alert(dataForm);
 		addStaff(dataForm);
 
-		
-
 
 	});
+
+// when btn-activation-whatsapp clicked
+$('#btn-activation-whatsapp').click(function(){
+
+		let tokenNa = $('#staff-activation-token').val();
+		let waNa = $('#staff-activation-whatsapp').val();
+
+		sendingWAActivation(waNa, tokenNa);
+
+}); 
+
+
+// when link link-activate-staff clicked
+	$('.link-activate-staff').click(function(){
+
+		let idNa = $(this).data('id');
+		let tokenNa = $(this).data('token');
+
+		//show the form after 3 secs
+		setTimeout(function(){
+			hideModalByID('#modal-loading');
+
+			activateOptionStaff(idNa, tokenNa);
+		}, 3000);
+		
+
+	}); 
 
 	// when link link-edit-staff clicked
 	$('.link-edit-staff').click(function(){
@@ -125,6 +150,52 @@ function displayStaffForm(idMasuk, tokenMasuk, dataJSON){
 
 }
 
+function sendingWAActivation(nomorWA, code7){
+
+	let  number = nomorWA.replace(/\D/g, '');
+  let message = "*7 Digit OTP - Sistem Absensi* untuk Anda yaitu : *" + code7 + "*";
+  // Create the WhatsApp link
+  let link = 'https://wa.me/' + number + '?text=' + encodeURIComponent(message);
+
+  // Open the link in a new tab
+  window.open(link, '_blank');
+
+}
+
+function sendingEmailActivation(){
+
+	
+
+}
+
+function displayActivationForm(idMasuk, tokenMasuk, dataJSON){
+	// changing state
+	let formStaff = $('#modal-activation').find('form');
+	formStaff.attr('action', '/staff/activate');
+	formStaff.attr('data-id', idMasuk);
+
+	showModalByButtonID('#btn-activate-staff');
+	
+	// ensure the string is in json format
+	dataJSON = JSON.parse(dataJSON);
+
+	$('#staff-activation-id').val(idMasuk);
+	
+	$('#staff-activation-token').val(tokenMasuk);
+	$('#staff-activation-title').text("Staff Activation");
+
+	$('#staff-activation-whatsapp').val(dataJSON.whatsapp);
+	$('#staff-activation-email').val(dataJSON.email);
+
+	$('#staff-activation-name').val(dataJSON.name);
+
+	$('#link-activation-staff').hide();
+	
+	// trigger the button clicked
+	$('#btn-activate-staff').click();
+
+}
+
 function editStaff(idMasuk, tokenMasuk){
 
 	let dataForm = {id: idMasuk, public_token:tokenMasuk};
@@ -145,6 +216,42 @@ function editStaff(idMasuk, tokenMasuk){
 		        // show after 2 secs
 		        setTimeout(function(){
 		        	displayStaffForm(idMasuk, tokenMasuk, response);
+		        }, 3000);
+		        
+
+		      },
+		      error: function(jqXHR, textStatus, errorThrown) {
+		      		console.log('ERROR', textStatus, errorThrown);
+		      		console.log(jqXHR.responseText);
+		      		
+		      }
+		 }); // ajax post ended
+
+
+}
+
+function activateOptionStaff(idMasuk, tokenMasuk){
+
+	let dataForm = {id: idMasuk, public_token:tokenMasuk};
+
+	// after timeout render into the edit form
+	let urlNa = mainURL + "/staff/edit";
+	
+		// ajax post started
+		 $.ajax({
+		      url: urlNa, 
+		      type: "POST",
+		      data: dataForm,
+		      success: function(response) {
+		        
+		      	//console.log('kirim ' + JSON.stringify(dataForm));
+
+		        //refreshMe();
+		        console.log(response);
+
+		        // show after 2 secs
+		        setTimeout(function(){
+		        	displayActivationForm(idMasuk, tokenMasuk, response);
 		        }, 3000);
 		        
 

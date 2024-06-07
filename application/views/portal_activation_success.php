@@ -7,20 +7,20 @@ $v = "?" . time();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Absensi - FGroupIndonesia</title>
-	<script src="/js/jquery.slim.min.js<?= $v ;?>" ></script>
-	<script src="/js/bootstrap.bundle.min.js<?= $v ;?>" ></script>
-	<script src="/js/jquery-3.3.1.min.js<?= $v ;?>" ></script>
-	<script src="/js/works.js<?= $v ;?>" ></script>
-	<link rel="stylesheet" href="/css/bootstrap.min.css<?= $v ;?>" >
-	<link rel="stylesheet" href="/css/style.css<?= $v ;?>" >
-	<link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+	<script src="/assets/js/jquery.slim.min.js<?= $v ;?>" ></script>
+	<script src="/assets/js/bootstrap.bundle.min.js<?= $v ;?>" ></script>
+	<script src="/assets/js/jquery-3.3.1.min.js<?= $v ;?>" ></script>
+	<script src="/assets/js/works.js<?= $v ;?>" ></script>
+	<link rel="stylesheet" href="/assets/css/bootstrap.min.css<?= $v ;?>" >
+	<link rel="stylesheet" href="/assets/css/style.css<?= $v ;?>" >
+	<link rel="icon" type="image/x-icon" href="/assets/img/favicon.ico">
 </head>
 
 <body>
 	<div id="page0" class="container">
 		<h2> Portal Absensi </h2>
 		<h4>Loading...</h4>
-		<img src="/images/loading.gif" />
+		<img src="/assets/img/loading.gif" />
 		
 	</div>
 
@@ -32,7 +32,7 @@ $v = "?" . time();
 		Sebentar lagi kamu dapat melakukan absensi secara leluasa.
 		</p>
 		<div class="success">
-			<img src="/images/complete.png" />
+			<img src="/assets/img/complete.png" />
 		</div>
 
 		<p>

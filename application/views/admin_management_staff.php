@@ -7,20 +7,22 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <title>Management Staff - Sistem Absensi Digital.</title>
     <!-- CSS files -->
-    <link href="/css/tabler.min.css<?=$rnum?>" rel="stylesheet"/>
-    <link href="/css/tabler-flags.min.css<?=$rnum?>" rel="stylesheet"/>
-    <link href="/css/tabler-payments.min.css<?=$rnum?>" rel="stylesheet"/>
-    <link href="/css/tabler-vendors.min.css<?=$rnum?>" rel="stylesheet"/>
-    <link href="/css/demo.min.css<?=$rnum?>" rel="stylesheet"/>
+    <link href="/assets/css/tabler.min.css<?=$rnum?>" rel="stylesheet"/>
+    <link href="/assets/css/tabler-flags.min.css<?=$rnum?>" rel="stylesheet"/>
+    <link href="/assets/css/tabler-payments.min.css<?=$rnum?>" rel="stylesheet"/>
+    <link href="/assets/css/tabler-vendors.min.css<?=$rnum?>" rel="stylesheet"/>
+    <link href="/assets/css/demo.min.css<?=$rnum?>" rel="stylesheet"/>
+     <link href="/assets/css/custom-style.css<?=$rnum?>" rel="stylesheet"/>
+
     <style>
-      @import url('/css/inter.css');
+      @import url('/assets/css/inter.css');
       :root {
       	--tblr-font-sans-serif: Inter, -apple-system, BlinkMacSystemFont, San Francisco, Segoe UI, Roboto, Helvetica Neue, sans-serif;
       }
     </style>
   </head>
   <body >
-    <script src="/js/demo-theme.min.js<?=$rnum?>"></script>
+    <script src="/assets/js/demo-theme.min.js<?=$rnum?>"></script>
     <div class="page">
       <!-- Navbar -->
        <?php include('header.php'); ?>
@@ -48,6 +50,12 @@
                     <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
                     Add New Staff
+                  </button>
+
+                  <button id="btn-activate-staff" href="#" class="btn btn-primary d-none d-sm-inline-block" data-bs-toggle="modal" data-bs-target="#modal-activation">
+                    <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                    Activate Staff
                   </button>
                  
                 </div>
@@ -165,6 +173,9 @@
                                 <a data-id="<?= $staff->id; ?>" class="dropdown-item link-delete-staff" href="#" data-bs-toggle="modal" data-bs-target="#modal-loading">
                                   Delete
                                 </a>
+                                  <a data-token="<?= $staff->public_token ;?>" data-id="<?= $staff->id; ?>" class="dropdown-item link-activate-staff" href="#" data-bs-toggle="modal" data-bs-target="#modal-loading">
+                                  Activate
+                                </a>
                               </div>
                             </span>
                           </td>
@@ -214,11 +225,11 @@
     <?php include('popup-modals.php'); ?>
     <!-- Libs JS -->
     <!-- Tabler Core -->
-    <script src="/js/tabler.min.js<?=$rnum?>" defer></script>
-    <script src="/js/demo.min.js<?=$rnum?>" defer></script>
-     <script src="/js/jquery-3.3.1.min.js<?=$rnum?>" defer></script>
-     <!-- <script src="/js/bootstrap.bundle.min.js<?=$rnum?>" defer></script> -->
-     <script src="/js/form-actions.js<?=$rnum?>" defer></script>
+    <script src="/assets/js/tabler.min.js<?=$rnum?>" defer></script>
+    <script src="/assets/js/demo.min.js<?=$rnum?>" defer></script>
+     <script src="/assets/js/jquery-3.3.1.min.js<?=$rnum?>" defer></script>
+     <!-- <script src="/assets/js/bootstrap.bundle.min.js<?=$rnum?>" defer></script> -->
+     <script src="/assets/js/form-actions.js<?=$rnum?>" defer></script>
 
   </body>
 </html>

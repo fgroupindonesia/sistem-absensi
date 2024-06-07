@@ -5,9 +5,9 @@
 	<title>Login - Sistem Absensi</title>
    <!--Made with love by Mutiullah Samim -->
 
-	<script src="/js/jquery-3.3.1.min.js"></script>
-   <link href="/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-	<script src="/js/bootstrap.min.js"></script>
+	<script src="/assets/js/jquery-3.3.1.min.js"></script>
+   <link href="/assets/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	<script src="/assets/js/bootstrap.min.js"></script>
 
 	
     
@@ -15,7 +15,7 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
 	<!--Custom styles-->
-	<link rel="stylesheet" type="text/css" href="/css/admin_login.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/admin_login.css">
 </head>
 <body>
 <div class="container">
