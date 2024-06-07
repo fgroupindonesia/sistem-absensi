@@ -6,8 +6,8 @@ var URL_VERIFIKASI = "/portal/verifikasi";
 var URL_VERIFIKASI_2ND = "/portal/verifikasiwa";
 var URL_ATTENDANCE = "/portal/absen/all";
 var URL_WA_ADMIN = "https://api.whatsapp.com/send?phone=6285795569337&text=";
-//var URL_MAIN_PORTAL = "http://absensi.fgroupindonesia.com/portal";
-var URL_MAIN_PORTAL = "http://192.168.0.11/portal";
+var URL_MAIN_PORTAL = "http://absensi.fgroupindonesia.com/portal";
+//var URL_MAIN_PORTAL = "http://192.168.0.11/portal";
 
 var data_username = "username";
 var data_phone = "phone_numbers";

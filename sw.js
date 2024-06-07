@@ -1,51 +1,37 @@
-self.addEventListener("install", function(event) {
-  event.waitUntil(preLoad());
+const CACHE_NAME = 'cool-cache';
+
+// Add whichever assets you want to precache here:
+const PRECACHE_ASSETS = [
+    '/assets/',
+    '/'
+]
+
+// Listener for the install event - precaches our assets list on service worker install.
+self.addEventListener('install', event => {
+    event.waitUntil((async () => {
+        const cache = await caches.open(CACHE_NAME);
+        cache.addAll(PRECACHE_ASSETS);
+    })());
 });
 
-var preLoad = function(){
-  console.log("Installing web app");
-  return caches.open("offline").then(function(cache) {
-    console.log("caching index and important routes");
-    return cache.addAll(["/portal/", "/", "/offline.html"]);
-  });
-};
-
-self.addEventListener("fetch", function(event) {
-  event.respondWith(checkResponse(event.request).catch(function() {
-    return returnFromCache(event.request);
-  }));
-  event.waitUntil(addToCache(event.request));
+self.addEventListener('activate', event => {
+  event.waitUntil(self.clients.claim());
 });
 
-var checkResponse = function(request){
-  return new Promise(function(fulfill, reject) {
-    fetch(request).then(function(response){
-      if(response.status !== 404) {
-        fulfill(response);
+self.addEventListener('fetch', event => {
+  event.respondWith(async () => {
+      const cache = await caches.open(CACHE_NAME);
+
+      // match the request to our cache
+      const cachedResponse = await cache.match(event.request);
+
+      // check if we got a valid response
+      if (cachedResponse !== undefined) {
+          // Cache hit, return the resource
+          return cachedResponse;
       } else {
-        reject();
-      }
-    }, reject);
+        // Otherwise, go to the network
+          return fetch(event.request)
+      };
   });
-};
-
-var addToCache = function(request){
-  return caches.open("offline").then(function (cache) {
-    return fetch(request).then(function (response) {
-      console.log(response.url + " was cached");
-      return cache.put(request, response);
-    });
-  });
-};
-
-var returnFromCache = function(request){
-  return caches.open("offline").then(function (cache) {
-    return cache.match(request).then(function (matching) {
-     if(!matching || matching.status == 404) {
-       return cache.match("offline.html");
-     } else {
-       return matching;
-     }
-    });
-  });
-};
+});

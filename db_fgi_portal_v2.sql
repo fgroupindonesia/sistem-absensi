@@ -16,9 +16,9 @@
 
 
 -- Dumping database structure for db_fgi_portal_v2
-DROP DATABASE IF EXISTS `db_fgi_portal_v2`;
+/*DROP DATABASE IF EXISTS `db_fgi_portal_v2`;
 CREATE DATABASE IF NOT EXISTS `db_fgi_portal_v2` /*!40100 DEFAULT CHARACTER SET latin1 */;
-USE `db_fgi_portal_v2`;
+USE `fgroupin_portal_v2`;
 
 -- Dumping structure for table db_fgi_portal_v2.data_attendance
 DROP TABLE IF EXISTS `data_attendance`;

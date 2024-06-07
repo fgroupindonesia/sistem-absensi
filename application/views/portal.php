@@ -164,7 +164,7 @@ $v = "?" . time();
 			   <span id="coordinates" ></span>
 
 			</div>
-				<audio id="click-sound" src="/audio/beep.mp3"></audio>
+				<audio id="click-sound" src="/assets/audio/beep.mp3"></audio>
 
 	</div>
 

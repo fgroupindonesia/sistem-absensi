@@ -1,18 +1,46 @@
 {
-    "name": "Sistem Absensi",
-    "short_name": "Sistem Absensi",
-    "theme_color": "#ffcbe4",
-    "background_color": "#fa99ca",
-    "display": "standalone",
-    "scope": "/",
-    "start_url": "https://absensi.fgroupindonesia.com/portal",
-    "description": "Web Portal for Attendance System - FGroupIndonesia",
-    "orientation": "any",
-    "icons": [
-        {
-            "src": "http://absensi.fgroupindonesia.com/images/favicon.png",
-            "type": "image/png",
-            "sizes": "512x512"
-        }
-    ]
+  "name": "Sistem Absensi",
+  "short_name": "Sistem Absensi",
+  "theme_color": "#7fc2ff",
+  "background_color": "#088aff",
+  "display": "fullscreen",
+  "scope": "https://absensi.fgroupindonesia.com/portal",
+  "start_url": "https://absensi.fgroupindonesia.com/portal",
+  "description": "Web Portal for Attendance System - FGroupIndonesia",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "https://absensi.fgroupindonesia.com/assets/img/favicon.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+     {
+      "src": "https://absensi.fgroupindonesia.com/assets/img/favicon.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "dir": "auto",
+  "lang": "en",
+  "display_override": [
+    "standalone"
+  ],
+  "id": "sistem_absensi",
+   "screenshots": [
+    {
+      "src": "https://absensi.fgroupindonesia.com/assets/img/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "features": [
+    "Cross Platform",
+    "fast",
+    "simple"
+  ],
+  "categories": [
+    "utilities"
+  ],
+  "prefer_related_applications": false,
+  "iarc_rating_id": "e58c174a-81d2-5c3c-32cc-34b8de4a52e9"
 }

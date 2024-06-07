@@ -16,9 +16,9 @@
 
 
 -- Dumping database structure for db_fgi_sistem_absensi_v1
-DROP DATABASE IF EXISTS `db_fgi_sistem_absensi_v1`;
-CREATE DATABASE IF NOT EXISTS `db_fgi_sistem_absensi_v1` /*!40100 DEFAULT CHARACTER SET latin1 */;
-USE `db_fgi_sistem_absensi_v1`;
+/*DROP DATABASE IF EXISTS `db_fgi_sistem_absensi_v1`;
+//CREATE DATABASE IF NOT EXISTS `db_fgi_sistem_absensi_v1` /*!40100 DEFAULT CHARACTER SET latin1 */;
+USE `fgroupin_sistem_absensi_v1`;
 
 -- Dumping structure for table db_fgi_sistem_absensi_v1.table_attendance
 DROP TABLE IF EXISTS `table_attendance`;
