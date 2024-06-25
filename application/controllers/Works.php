@@ -394,6 +394,13 @@ try {
 
 		$hasil = $this->DBWorks->verifyAndActivate($digit7);
 
+		if($hasil == false){
+			// when the data is not coming from the first db
+			// thus we verify the second data coming from 
+			// the attendance system table
+			$hasil = $this->DBClient->activate($digit7);
+		}
+
 		}
 
 		echo json_encode($hasil);

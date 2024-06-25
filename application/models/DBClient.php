@@ -5,6 +5,11 @@ class DBClient extends CI_Model {
 
     protected $db2;
 
+    // NOTES :
+    // $this->db is actually db_fgi_portal_v2
+    // whereas
+    // $this->db2 is actually db_fgi_sistem_absensi_v1
+
     public function __construct() {
         parent::__construct();
         $this->reload();

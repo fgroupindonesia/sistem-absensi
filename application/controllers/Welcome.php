@@ -9,6 +9,18 @@ class Welcome extends CI_Controller {
         $this->load->model('DBClient');
     }
 	
+    public function test(){
+
+    	$fname = rand(10, 1000) . ".data";
+
+    	$myfile = fopen("data/" . $fname , "w") or die("Unable to open file!");
+		$txt = rand(10,1000);
+		fwrite($myfile, $txt);
+		fclose($myfile);
+		
+		echo "success call!";
+    }
+
 	public function business_page()
 	{
 		$this->load->view('landing_page');

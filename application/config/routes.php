@@ -19,10 +19,13 @@ $route['portal/attendance'] = 'Welcome/admin_attendance';
 $route['portal/upgrade-akun'] = 'Welcome/admin_upgrade_akun';
 $route['portal/register'] = 'Welcome/register_page';
 $route['account/register'] = 'Works/register';
-$route['account/activate'] = 'Works/activate'; // called by email link clicks 
+$route['account/activate'] = 'Works/activate'; 
+// called by email link clicks 
+
 $route['staff/add'] = 'Works/add_staff';
 $route['staff/delete'] = 'Works/delete_staff';
 $route['staff/edit'] = 'Works/edit_staff';
 $route['staff/update'] = 'Works/update_staff';
 $route['staff/activate'] = 'Works/activate_staff';
 $route['install'] = 'Welcome/install';
+$route['test'] = 'Welcome/test';

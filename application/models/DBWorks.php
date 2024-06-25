@@ -3,6 +3,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class DBWorks extends CI_Model {
 
+    // NOTES :
+    // $this->db is actually db_fgi_portal_v2
+    // whereas
+    // $this->db2 is actually db_fgi_sistem_absensi_v1
+
     public function verifyByColumn($col, $val){
 
 
