@@ -385,6 +385,58 @@ try {
 		return false;
 	}
 
+
+	public function add_absensi(){
+
+		// using POST parameter
+		$email 	=	$this->input->post('email');
+		$client =	$this->input->post('client');
+
+		// the client type is the sender
+		// thus it would be either : portal or device (mobile)	
+
+		$result = null;
+		$fromWhere = null;
+
+		if(isset($email)){
+			$result =	$this->DBWorks->verifyByColumn('email', $email);
+
+			if($result == false){
+				
+				// check from another database
+				$result = $this->DBClient->verifyByColumn('email', $email);
+
+				if($result != false){
+					$fromWhere = "client";
+				}
+
+			}else{
+				$fromWhere = "portal";
+			}
+
+
+			if($result != false){
+
+				if($fromWhere != null){
+					// we execute it 
+					$dataArray = (array) $result;
+
+					if($fromWhere == "client"){
+						$result =	$this->DBClient->add_new_attendance($dataArray);
+					}else if($fromWhere == "portal"){
+						$result =	$this->DBWorks->add_new_attendance($dataArray, null);
+					}
+				}
+
+				echo json_encode($result);
+			}
+
+		}
+
+	 	
+
+	}
+
 	public function verifikasiwa()
 	{
 		// received by POST of js call from client

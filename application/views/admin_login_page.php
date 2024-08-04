@@ -2,8 +2,7 @@
 
 <!DOCTYPE html>
 <head>
-	<title>Login - Sistem Absensi</title>
-   <!--Made with love by Mutiullah Samim -->
+	<title>Login - Sistem Kehadiran</title>
 
 	<script src="/assets/js/jquery-3.3.1.min.js"></script>
    <link href="/assets/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">

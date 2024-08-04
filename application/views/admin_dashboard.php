@@ -5,7 +5,7 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-    <title>Dashboard - Sistem Absensi Digital.</title>
+    <title>Dashboard - Sistem Kehadiran Digital.</title>
     <!-- CSS files -->
     <link href="/assets/css/tabler.min.css<?=$rnum?>" rel="stylesheet"/>
     <link href="/assets/css/tabler-flags.min.css<?=$rnum?>" rel="stylesheet"/>
@@ -66,7 +66,7 @@
                 <div class="card">
                   <div class="card-body">
                     <div class="d-flex align-items-center">
-                      <div class="subheader">Absensi</div>
+                      <div class="subheader">kehadiran</div>
                       <div class="ms-auto lh-1">
                         <div class="dropdown">
                           <a class="dropdown-toggle text-muted" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Last 7 days</a>
@@ -168,7 +168,7 @@
                           </div>
                           <div class="col">
                             <div class="font-weight-medium">
-                              Absensi Paling Awal
+                              kehadiran Paling Awal
                             </div>
                             <div class="text-muted">
                               12 staff
@@ -189,7 +189,7 @@
                           </div>
                           <div class="col">
                             <div class="font-weight-medium">
-                              Absensi Paling Lambat
+                              kehadiran Paling Lambat
                             </div>
                             <div class="text-muted">
                               32 staff
@@ -210,7 +210,7 @@
                           </div>
                           <div class="col">
                             <div class="font-weight-medium">
-                              Absensi Ontime
+                              kehadiran Ontime
                             </div>
                             <div class="text-muted">
                               16 staff
@@ -310,15 +310,15 @@
               <div class="col-md-12 col-lg-8">
                 <div class="card">
                   <div class="card-header">
-                    <h3 class="card-title">Intensitas Absen Staff (Bulan Ini)</h3>
+                    <h3 class="card-title">Intensitas Kehadiran Staff (Bulan Ini)</h3>
                   </div>
                   <div class="card-table table-responsive">
                     <table class="table table-vcenter">
                       <thead>
                         <tr>
                           <th>Nama Karyawan</th>
-                          <th>Absensi Hadir</th>
-                          <th>Absensi Bolos</th>
+                          <th>Kehadiran</th>
+                          <th>Ketidakhadiran</th>
                           <th colspan="2">Tingkat Kehadiran</th>
                         </tr>
                       </thead>

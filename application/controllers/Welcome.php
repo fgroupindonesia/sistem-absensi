@@ -31,6 +31,11 @@ class Welcome extends CI_Controller {
 		$this->load->view('install_app');
 	}
 
+	public function device()
+	{
+		$this->load->view('device_scanner');
+	}
+
 	public function register_page()
 	{
 		$tipe = $this->input->get('type');

@@ -46,6 +46,25 @@ class DBWorks extends CI_Model {
         return $hasil;
 
     }
+
+    private function getClassRegisteredByUsername($username){
+
+        $hasil = false;
+
+        $filterNa = array(
+            'username' => $tokenVal
+        );
+        
+       $this->db->where($filterNa);
+       $query = $this->db->get('data_schedule');
+
+        if($query->num_rows() > 0){
+            $hasil = $query->row();
+        }
+
+        return $hasil;
+
+    }
   
 
     public function verifyByColumnWithUpdatedToken($col, $val, $tok){
@@ -117,6 +136,41 @@ class DBWorks extends CI_Model {
 
     }
 	
+    public function add_new_attendance($data, $sign){
+
+       // here in portal we used BAHASA INDONESIA data
+
+        // status is either 1 :
+        // sakit = ill
+        // idzin = excuse
+        // absen = skip
+        // hadir = present
+
+        $s       = "hadir";
+        $u       = $data['username'];
+        $c       = $this->getClassRegisteredByUsername($u);
+        date_default_timezone_set('Asia/Jakarta');
+        $date    = date('Y-m-d H:i:s');
+        
+        if($sign == null){
+            $sign = 'not available';
+        }
+
+        $newData = array(
+            'username'          => $u,
+            'class_registered'  => $c,
+            'status'            => $s,
+            'signature'         => $sign,
+            'date_created'      => $dt  
+        );
+
+        $this->db2->insert('table_attendance', $data);
+        // Check if the insertion was successful
+        return $this->db2->affected_rows() > 0;
+
+
+    }
+
 	public function getAllAttendance($username){
 		
 		$data = array(

@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Sistem Absensi Digital - FGroupIndonesia.</title>
+  <title>Sistem kehadiran Digital - FGroupIndonesia.</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -36,7 +36,7 @@
     <div class="container d-flex align-items-center">
 
       <div class="logo me-auto">
-        <h1><a href="index.html">Absensi</a></h1>
+        <h1><a href="index.html">kehadiran</a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
       </div>
@@ -78,9 +78,9 @@
       <div class="row">
         <div class="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center" data-aos="fade-up">
           <div>
-            <h1>Pengen absensi lebih transparant?</h1>
-            <h2>Dengan kombinasi absensi dan fitur pengelolaan yang mudah anda kini menjadi semakin bahagia!</h2>
-            <a href="/portal/register" class="btn-get-started scrollto">Coba Daftar</a>
+            <h1>Ingin kehadiran lebih transparan?</h1>
+            <h2>Dengan kombinasi kehadiran dan fitur pengelolaan yang mudah anda kini menjadi semakin bahagia!</h2>
+            <a href="/portal/register" class="btn-get-started scrollto">Daftar Sekarang</a>
           </div>
         </div>
         <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="fade-left">
@@ -105,7 +105,7 @@
             <div class="content pt-4 pt-lg-0">
               <h3>Pelajari Lebih Lanjut</h3>
               <p class="fst-italic">
-                Anda perlu menggunakan absensi secara digital untuk memudahkan pengelolaan karyawan / tim tanpa kesulitan! 
+                Anda perlu menggunakan kehadiran secara digital untuk memudahkan pengelolaan karyawan / tim tanpa kesulitan! 
               </p>
               <ul>
                 <li><i class="bi bi-check-circle"></i> Pengelolaan Mudah.</li>
@@ -132,7 +132,7 @@
               <li class="nav-item" data-aos="fade-up">
                 <a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">
                   <h4>Keamanan Terbaik</h4>
-                  <p>Dengan dashboard khusus terancang dengan keamanan data absensi terbaik!</p>
+                  <p>Dengan dashboard khusus terancang dengan keamanan data kehadiran terbaik!</p>
                 </a>
               </li>
               <li class="nav-item mt-2" data-aos="fade-up" data-aos-delay="100">
@@ -189,8 +189,8 @@
       <div class="container">
 
         <div class="section-title" data-aos="fade-up">
-          <h2>Kenapa Harus Absensi Digital?</h2>
-          <p>Ramai orang menggunakan absensi dengan menerapkan geolocation tanpa memperhatikan simplisitas dan egeri yang ada. Namun saya ngantukkk....</p>
+          <h2>Kenapa Harus kehadiran Digital?</h2>
+          <p>Ramai orang menggunakan kehadiran dengan menerapkan geolocation dengan keuntungan komplit lainnya!</p>
         </div>
 
         <div class="row">
@@ -205,8 +205,8 @@
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="100">
             <div class="icon-box icon-box-cyan">
               <div class="icon"><i class="bx bx-file"></i></div>
-              <h4 class="title"><a href="">Automatisasi Proses Absensi</a></h4>
-              <p class="description">Otomatisasi pencatatan masuk dan keluar hingga perhitungan jam kerja dan cuti, mengurangi potensi kesalahan manusia, memastikan keakuratan data absensi.</p>
+              <h4 class="title"><a href="">Automatisasi Proses kehadiran</a></h4>
+              <p class="description">Otomatisasi pencatatan masuk dan keluar hingga perhitungan jam kerja dan cuti, mengurangi potensi kesalahan manusia, memastikan keakuratan data kehadiran.</p>
             </div>
           </div>
 
@@ -240,10 +240,10 @@
         <div class="row" data-aos="zoom-in">
           <div class="col-lg-9 text-center text-lg-start">
             <h3>Kenali Lebih Lanjut</h3>
-            <p>JHubungi kami melalui tombol hijau ini untuk mendapatkan informasi lebih lanjut dan penawaran khusus. Kami siap membantu Anda meningkatkan produktivitas dan efektivitas dalam pengelolaan absensi karyawan. Jangan lewatkan kesempatan untuk merubah cara Anda bekerja, gapai segera!</p>
+            <p>Hubungi kami melalui tombol hijau ini untuk mendapatkan informasi lebih lanjut dan penawaran khusus. Kami siap membantu Anda meningkatkan produktivitas dan efektivitas dalam pengelolaan kehadiran karyawan. Jangan lewatkan kesempatan untuk merubah cara Anda bekerja, gapai segera!</p>
           </div>
           <div class="col-lg-3 cta-btn-container text-center">
-            <a class="cta-btn btn-green align-middle" href="https://wa.me/c/6285795569337">Kontak WA</a>
+            <a class="cta-btn btn-green align-middle" href="https://wa.me/c/6285795569337">Kontak Whatsapp</a>
           </div>
         </div>
 
@@ -256,7 +256,7 @@
 
         <div class="section-title" data-aos="fade-up">
           <h2>Testimonials</h2>
-          <p>Simak kisah sukses dan pengalaman terbaik dari para pengguna setia kami dalam penggunaan sistem absensi digital yang telah meningkatkan efisiensi dan ketertiban dalam pengelolaan kehadiran karyawan.</p>
+          <p>Simak kisah sukses dan pengalaman terbaik dari para pengguna setia kami dalam penggunaan sistem kehadiran digital yang telah meningkatkan efisiensi dan ketertiban dalam pengelolaan kehadiran karyawan.</p>
         </div>
 
         <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
@@ -266,7 +266,7 @@
               <div class="testimonial-item">
                 <p>
                   <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Sistem absensi web ini telah membawa transparansi dalam proses absensi. Karyawan dapat dengan mudah mengakses dan memverifikasi catatan absensi mereka sendiri, menciptakan lingkungan kerja yang lebih terbuka dan akuntabel.
+                  Sistem kehadiran web ini telah membawa transparansi dalam proses kehadiran. Karyawan dapat dengan mudah mengakses dan memverifikasi catatan kehadiran mereka sendiri, menciptakan lingkungan kerja yang lebih terbuka dan akuntabel.
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
                 <img src="/assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
@@ -279,7 +279,7 @@
               <div class="testimonial-item">
                 <p>
                   <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Fitur integrasi dengan sistem lainnya membuat manajemen sumber daya manusia menjadi lebih efisien. Sistem ini secara otomatis menyinkronkan data absensi dengan platform lainnya, menghemat waktu dan mengurangi risiko kesalahan manusiawi.
+                  Fitur integrasi dengan sistem lainnya membuat manajemen sumber daya manusia menjadi lebih efisien. Sistem ini secara otomatis menyinkronkan data kehadiran dengan platform lainnya, menghemat waktu dan mengurangi risiko kesalahan manusiawi.
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
                 <img src="/assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
@@ -305,7 +305,7 @@
               <div class="testimonial-item">
                 <p>
                   <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                 Saya terkesan dengan fitur pelaporan yang canggih. Dengan sistem ini, kami dapat dengan mudah menganalisis data absensi, memonitor keterlambatan, dan membuat keputusan strategis untuk meningkatkan manajemen karyawan.
+                 Saya terkesan dengan fitur pelaporan yang canggih. Dengan sistem ini, kami dapat dengan mudah menganalisis data kehadiran, memonitor keterlambatan, dan membuat keputusan strategis untuk meningkatkan manajemen karyawan.
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
                 <img src="/assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
@@ -318,7 +318,7 @@
               <div class="testimonial-item">
                 <p>
                   <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Pilihan sistem absensi web ini memberikan fleksibilitas luar biasa. Kami dapat mengaksesnya dari mana saja, memudahkan kami untuk melacak absensi karyawan bahkan saat bepergian.
+                  Pilihan sistem kehadiran web ini memberikan fleksibilitas luar biasa. Kami dapat mengaksesnya dari mana saja, memudahkan kami untuk melacak kehadiran karyawan bahkan saat bepergian.
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
                 <img src="/assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
@@ -403,7 +403,7 @@
 
         <div class="section-title" data-aos="fade-up">
           <h2>Clients</h2>
-          <p>Di mana inovasi dan efisiensi bertemu disitulah sistem absensi kami digunakan bersama setiap klien yang telah merasakan transformasi dalam manajemen absensi dengan sistem ini:</p>
+          <p>Di mana inovasi dan efisiensi bertemu disitulah sistem kehadiran kami digunakan bersama setiap klien yang telah merasakan transformasi dalam manajemen kehadiran dengan sistem ini:</p>
         </div>
 
         <div class="row no-gutters clients-wrap clearfix wow fadeInUp">
@@ -467,7 +467,7 @@
 
         <div class="section-title" data-aos="fade-up">
           <h2>Paket Pilihan</h2>
-          <p>Optimalkan efisiensi dan akurasi pengelolaan absensi dengan Paket Sistem Absensi kami yang inovatif! Dengan fitur canggih dan user-friendly, untuk tetap memudahkan Anda dalam melacak dan mengelola kehadiran karyawan. Dapatkan kontrol penuh, laporan real-time, dan integrasi yang mulus dengan Paket Sistem Absensi berikut:</p>
+          <p>Optimalkan efisiensi dan akurasi pengelolaan kehadiran dengan Paket Sistem kehadiran kami yang inovatif! Dengan fitur canggih dan user-friendly, untuk tetap memudahkan Anda dalam melacak dan mengelola kehadiran karyawan. Dapatkan kontrol penuh, laporan real-time, dan integrasi yang mulus dengan Paket Sistem kehadiran berikut:</p>
         </div>
 
         <div class="row">
@@ -477,7 +477,7 @@
               <h3>GRATIS</h3>
               <h4><sup>Rp.</sup>0<span> / bln</span></h4>
               <ul>
-                <li>Absensi Realtime</li>
+                <li>kehadiran Realtime</li>
                 <li>Mode Checkpoint</li>
                 <li>Quota 5 Karyawan</li>
                 <li class="na">Customisasi Checkpoint</li>
@@ -494,7 +494,7 @@
               <h3>Sederhana</h3>
               <h4><sup>Rp.</sup>50rb<span> / bulan</span></h4>
               <ul>
-                <li>Absensi Realtime</li>
+                <li>kehadiran Realtime</li>
                 <li>Mode Checkpoint</li>
                 <li>Quota 25 Karyawan</li>
                 <li>Customisasi Checkpoint</li>
@@ -512,7 +512,7 @@
               <h3>Developer</h3>
               <h4><sup>Rp.</sup>150rb<span> / bulan</span></h4>
               <ul>
-                <li>Absensi Realtime</li>
+                <li>kehadiran Realtime</li>
                 <li>Mode Checkpoint &amp; Global</li>
                 <li>Quota 100 Karyawan</li>
                 <li>Customisasi Checkpoint</li>
@@ -534,7 +534,7 @@
               <h3>Ultimate</h3>
               <h4><sup>Rp.</sup>450rb<span> / bulan</span></h4>
               <ul>
-                <li>Absensi Realtime</li>
+                <li>kehadiran Realtime</li>
                 <li>Mode Checkpoint &amp; Global</li>
                 <li>Quota &gt; 1000 Karyawan</li>
                 <li>Customisasi Checkpoint</li>
@@ -578,7 +578,7 @@
             <div data-bs-toggle="collapse" href="#faq2" class="collapsed question">Apakah absen digital ini memerlukan instalasi aplikasi tambahan? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
             <div id="faq2" class="collapse" data-bs-parent=".faq-list">
               <p>
-                Tidak ada aplikasi tambahan lain yang diperlukan! Karena semua fitur sudah terangkum dalam portal sistem absensi secara terintegrasi menyeluruh.
+                Tidak ada aplikasi tambahan lain yang diperlukan! Karena semua fitur sudah terangkum dalam portal sistem kehadiran secara terintegrasi menyeluruh.
               </p>
             </div>
           </li>
@@ -587,7 +587,7 @@
             <div data-bs-toggle="collapse" href="#faq3" class="collapsed question">Bagaimanakah keamanan data yang dimiliki tiap perusahaan terdaftar? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
             <div id="faq3" class="collapse" data-bs-parent=".faq-list">
               <p>
-                Setiap perusahaan bisnis kamu yang telah terdaftar dan menggunakan akun dalam sistem portal absensi ini akan memiliki keamanan data terbaik dan terjamin tanpa efek samping apapun!
+                Setiap perusahaan bisnis kamu yang telah terdaftar dan menggunakan akun dalam sistem portal kehadiran ini akan memiliki keamanan data terbaik dan terjamin tanpa efek samping apapun!
               </p>
             </div>
           </li>
@@ -596,22 +596,22 @@
             <div data-bs-toggle="collapse" href="#faq4" class="collapsed question">Apakah memerlukan pengumpulan data SIUP / NPWP dan legalitas lainnya? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
             <div id="faq4" class="collapse" data-bs-parent=".faq-list">
               <p>
-                Tidak perlu! Kami memudahkan proses ini hanya dengan memberikan akses pendaftaran yang paling mudah via form secara online tanpa menyertakan dokumentasi legalitas yang penting milik tiap akun yang akan menggunakan sistem absensi ini.
+                Tidak perlu! Kami memudahkan proses ini hanya dengan memberikan akses pendaftaran yang paling mudah via form secara online tanpa menyertakan dokumentasi legalitas yang penting milik tiap akun yang akan menggunakan sistem kehadiran ini.
               </p>
             </div>
           </li>
 
           <li>
-            <div data-bs-toggle="collapse" href="#faq5" class="collapsed question">Apakah sistem absensi ini bisa digunakan oleh pengguna android atau iphone saja? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+            <div data-bs-toggle="collapse" href="#faq5" class="collapsed question">Apakah sistem kehadiran ini bisa digunakan oleh pengguna android atau iphone saja? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
             <div id="faq5" class="collapse" data-bs-parent=".faq-list">
               <p>
-                Kedua pengguna tersebut baik android maupun iphone dapat mengaksesnya dengan baik. Karena sistem portal absensi ini menggunakan platform web yang terkini!
+                Kedua pengguna tersebut baik android maupun iphone dapat mengaksesnya dengan baik. Karena sistem portal kehadiran ini menggunakan platform web yang terkini!
               </p>
             </div>
           </li>
 
           <li>
-            <div data-bs-toggle="collapse" href="#faq6" class="collapsed question">Saya minat menerapkan sistem absensi ini bagi seluruh karyawan, tetapi banyak pengguna karyawan yang tidak bisa berbahasa indonesia. Apakah tersedia UI sistem ini yang berbahasa inggris? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+            <div data-bs-toggle="collapse" href="#faq6" class="collapsed question">Saya minat menerapkan sistem kehadiran ini bagi seluruh karyawan, tetapi banyak pengguna karyawan yang tidak bisa berbahasa indonesia. Apakah tersedia UI sistem ini yang berbahasa inggris? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
             <div id="faq6" class="collapse" data-bs-parent=".faq-list">
               <p>
                 Tentu saja tersedia! Dwi bahasa yang disediakan ialah : Bahasa Indonesia &amp; Bahasa Inggris.

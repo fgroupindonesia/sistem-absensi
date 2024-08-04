@@ -15,6 +15,26 @@ class DBClient extends CI_Model {
         $this->reload();
     }
 
+
+     public function verifyByColumn($col, $val){
+
+        $hasil = false;
+
+        $filterNa = array(
+                        $col => $val
+        );
+        
+       $this->db2->where($filterNa);
+       $query = $this->db2->get('table_staff');
+
+        if($query->num_rows() > 0){
+            $hasil = $query->row();
+        }
+
+        return $hasil;
+
+    }
+
     public function getStaffByTokenAndID($dataArray){
         $hasil = false;
         $selection = array(
@@ -163,6 +183,37 @@ class DBClient extends CI_Model {
         }
 
         return false;
+
+    }
+
+     public function add_new_attendance($data){
+
+        $this->reload();
+
+        $idStaff = $data['id'];
+        $p       = $data['public_token'];
+
+        // status is either 1 :
+        // sakit = ill
+        // idzin = excuse
+        // absen = skip
+        // hadir = present
+
+        $s       = "present";
+        date_default_timezone_set('Asia/Jakarta');
+        $date    = date('Y-m-d H:i:s');
+        
+        $newData = array(
+            'id_staff'      => $idStaff,
+            'public_token'  => $p,
+            'status'        => $s,
+            'date_created'  => $date
+        );
+
+        $this->db2->insert('table_attendance', $data);
+        // Check if the insertion was successful
+        return $this->db2->affected_rows() > 0;
+
 
     }
 
