@@ -23,8 +23,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://xabsensi.fgroupindonesia.com/';
-//$config['base_url'] = 'http://192.168.0.10';
+//$config['base_url'] = 'http://xabsensi.fgroupindonesia.com/';
+$config['base_url'] = 'http://192.168.0.11/';
+//$config['base_url'] = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "https") . "://localhost";
+
 
 /*
 |--------------------------------------------------------------------------

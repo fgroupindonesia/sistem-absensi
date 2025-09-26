@@ -7,21 +7,21 @@ $v = "?" . time();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Absensi - FGroupIndonesia</title>
-	<script src="/assets/js/jquery.slim.min.js<?= $v ;?>" ></script>
-	<script src="/assets/js/bootstrap.bundle.min.js<?= $v ;?>" ></script>
-	<script src="/assets/js/jquery-3.3.1.min.js<?= $v ;?>" ></script>
-	<script src="/assets/js/works.js<?= $v ;?>" ></script>
-	<script src="/assets/js/jsQR.js<?= $v ;?>"></script>
-	<link rel="stylesheet" href="/assets/css/bootstrap.min.css<?= $v ;?>" >
-	<link rel="stylesheet" href="/assets/css/style.css<?= $v ;?>" >
-	<link rel="icon" type="image/x-icon" href="/assets/img/favicon.ico">
+	<script src="<?=base_url();?>/assets/js/jquery.slim.min.js<?= $v ;?>" ></script>
+	<script src="<?=base_url();?>/assets/js/bootstrap.bundle.min.js<?= $v ;?>" ></script>
+	<script src="<?=base_url();?>/assets/js/jquery-3.3.1.min.js<?= $v ;?>" ></script>
+	<script src="<?=base_url();?>/assets/js/works.js<?= $v ;?>" ></script>
+	<script src="<?=base_url();?>/assets/js/jsQR.js<?= $v ;?>"></script>
+	<link rel="stylesheet" href="<?=base_url();?>/assets/css/bootstrap.min.css<?= $v ;?>" >
+	<link rel="stylesheet" href="<?=base_url();?>/assets/css/style.css<?= $v ;?>" >
+	<link rel="icon" type="image/x-icon" href="<?=base_url();?>/assets/img/favicon.ico">
 </head>
 
 <body>
 	<div id="page0" class="container">
 		<h2> Portal Absensi </h2>
 		<h4>Loading...</h4>
-		<img src="/assets/img/loading.gif" />
+		<img src="<?=base_url();?>/assets/img/loading.gif" />
 		
 	</div>
 
@@ -32,12 +32,12 @@ $v = "?" . time();
 		Pilih Mode Kamu (sebagai) :
 		</p>
 		<div class="menu menu-user" data-user="peserta">
-			<img src="/assets/img/user.png" />
+			<img src="<?=base_url();?>/assets/img/user.png" />
 			<label><b>Peserta (Kursus)</b></label>
 		</div>
 
 		<div class="menu menu-user" data-user="pengajar">
-			<img src="/assets/img/staff.png" />
+			<img src="<?=base_url();?>/assets/img/staff.png" />
 			<label><b>Pengajar (Instruktur)</b></label>
 		</div>
 	</div>
@@ -49,12 +49,12 @@ $v = "?" . time();
 		Mana jalur verifikasi yang kamu dapat akses? :
 		</p>
 		<div id="wa-verifikasi" class="menu" data-user="wa">
-			<img src="/assets/img/wa.png" />
+			<img src="<?=base_url();?>/assets/img/wa.png" />
 			<label><b>Whatsapp</b></label>
 		</div>
 
 		<div id="email-verifikasi" class="menu" data-user="email">
-			<img src="/assets/img/email.png" />
+			<img src="<?=base_url();?>/assets/img/email.png" />
 			<label><b>Email</b></label>
 		</div>
 	</div>
@@ -80,7 +80,7 @@ $v = "?" . time();
 				</div>
 
 		 	<input type="submit" id="btn-phone-ok" class="btn-gold" value="OK" />
-		 	<img id="img-loading" src="/assets/img/loading.gif" />
+		 	<img id="img-loading" src="<?=base_url();?>/assets/img/loading.gif" />
 		 	</div>
 		 	</form>
 	</div>
@@ -89,13 +89,13 @@ $v = "?" . time();
 		<h2> Portal Absensi </h2>
 		<div class="form-group" id="check-email">
 				 	<h4> Check Inbox Email </h4>
-				 	<img src="/assets/img/email.png" />
+				 	<img src="<?=base_url();?>/assets/img/email.png" />
 				    <p> Klik Link aktifasi akun agar dapat melakukan absensi. </p> 
 		</div>
 		<div class="form-group" id="check-kode-wa">
 				<form id="form-digit-verifikasi" action="/portal/verifikasiwa" method="post" >
 				 	<h4> Input 7 Digit Kode </h4>
-				 	<img src="/assets/img/wa.png" />
+				 	<img src="<?=base_url();?>/assets/img/wa.png" />
 				    <p> Isilah dengan nomor kode verifikasi agar dapat melakukan absensi menggunakan akun ini.</p>
 				    <p class="error-kode-wa"> Kode Anda Salah! 
 				    	Harap Ketik kode yang valid.
@@ -112,7 +112,7 @@ $v = "?" . time();
 				    <input type="text" class="form-control kode-wa" id="kode-wa7">
 
 				    <input type="hidden" name="code" id="kode-wa-all"> </span>
-				    <img id="loading-kode-wa" src="/assets/img/loading.gif" />
+				    <img id="loading-kode-wa" src="<?=base_url();?>/assets/img/loading.gif" />
 				    </center> 
 
 				    <input type="submit" id="btn-kode-wa-ok" class="btn-gold" value="OK" />
@@ -132,15 +132,15 @@ $v = "?" . time();
 	<div id="page6" class="container">
 		<h2> Portal Absensi </h2>
 			<div id="absen-hadir" class="menu">
-			<img src="/assets/img/new.png" />
+			<img src="<?=base_url();?>/assets/img/new.png" />
 			<label><b>Mau Absen Sekarang</b></label>
 			</div>
 			<div id="absen-sebelum" class="menu">
-			<img src="/assets/img/search.png" />
+			<img src="<?=base_url();?>/assets/img/search.png" />
 			<label><b>Check Absen Sebelumnya</b></label>
 			</div>
 			<div id="cancel" class="menu">
-			<img src="/assets/img/cancel.png" />
+			<img src="<?=base_url();?>/assets/img/cancel.png" />
 			<label><b>Batal </b></label>
 			</div>	
 	</div>
@@ -164,7 +164,7 @@ $v = "?" . time();
 			   <span id="coordinates" ></span>
 
 			</div>
-				<audio id="click-sound" src="/assets/audio/beep.mp3"></audio>
+				<audio id="click-sound" src="<?=base_url();?>/assets/audio/beep.mp3"></audio>
 
 	</div>
 
@@ -195,26 +195,26 @@ $v = "?" . time();
 	<div id="loading" class="container">
 		<h2> Portal Absensi </h2>
 		<p >Sedang diproses dalam <span class="detik">5 detik. </span></p>
-		<img src="/assets/img/loading.gif" />
+		<img src="<?=base_url();?>/assets/img/loading.gif" />
 	</div>
 	
 	<div id="final"> 
 		<h2> Portal Absensi </h2>
 		<div id="success">
 		<p> Anda <b>Telah Absen Kehadiran dengan baik!</b> </p>
-		<img src="/assets/img/good.gif" />
+		<img src="<?=base_url();?>/assets/img/good.gif" />
 		</div>
 
 		<div id="failed">
 		<p> Data <b>Absen Gagal!</b> </p>
-		<img src="/assets/img/bad.gif" />
+		<img src="<?=base_url();?>/assets/img/bad.gif" />
 		</div>
 
 	</div>
 
 	<div id="exit" class="container">
 		<h2> Portal Absensi </h2>
-			<img src="/assets/img/bye.gif" />
+			<img src="<?=base_url();?>/assets/img/bye.gif" />
 			<label> Selamat berjumpa kembali nanti! </label>
 			<p >autoclose dalam <span class="detik">5 detik. </span></p>
 	</div>

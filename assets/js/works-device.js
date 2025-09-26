@@ -15,7 +15,7 @@ const limitPage = 5;
 var URL_ADD_ABSENSI 	= "/device/add-absensi";
 var URL_WA_ADMIN 			= "https://api.whatsapp.com/send?phone=6285795569337&text=";
 //var URL_MAIN_PORTAL = "http://absensi.fgroupindonesia.com/portal";
-var URL_MAIN_PORTAL 	= "http://192.168.0.10";
+//var URL_MAIN_PORTAL 	= "http://192.168.0.10";
 
 var data_username 		= "username";
 var data_phone 				= "phone_numbers";
@@ -387,7 +387,9 @@ async function init() {
       	if ('mediaDevices' in navigator && 'getUserMedia' in navigator.mediaDevices) {
   			// start camera works
 
-        const stream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: 'user' } });
+      		// switch 'user' -> front camera
+      		// to 'environment' -> rear camera
+        const stream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: 'environment' } });
         video.srcObject = stream;
 				videoStream = stream;
 

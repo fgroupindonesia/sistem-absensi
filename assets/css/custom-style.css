@@ -1,3 +1,28 @@
+
+#container-nama-lokasi {
+   display: none;
+}
+
+.link-qrcode-dinamis {
+    cursor: pointer;
+}   
+
+.card-detail-right{
+    padding: 10px;
+}
+
+ #map {
+   display: none;
+      height: 500px;
+      margin-top: 10px;
+    }
+
+#locationInput {
+      padding: 10px;
+      width: 100%;
+      font-size: 16px;
+    }
+
  .hidden {
     display: none;
   }
@@ -8,4 +33,81 @@
 
 .inner-button{
    margin:5px;
+}
+
+#preview-qr-section{
+   display: none;
+}
+
+#generated-qr {
+   width: 128px;
+   height: 128px;
+   display: block;
+}
+
+.qr-preview{
+
+cursor: pointer;
+
+}
+
+.modal-fullscreen {
+      max-width: 100% !important;
+      margin: 0 !important; /* Remove default margins */
+    }
+    .modal-fullscreen .modal-dialog {
+      display: flex; /* Enable flexbox for centering */
+      justify-content: center; /* Center horizontally */
+      align-items: center; /* Center vertically */
+      min-height: 100vh; /* Ensure modal covers full viewport height */
+      margin: 0 !important; /* Remove default margins */
+    }
+    .modal-fullscreen .modal-content {
+     
+      max-height: 100%; /* Limit to viewport height */
+      border: none; /* Remove default border */
+      border-radius: 0; /* Remove default border radius */
+      background-color: rgba(0, 0, 0, 0.8); /* Add a semi-transparent background */
+    }
+    .modal-fullscreen .modal-body {
+      padding: 0; /* Remove default padding */
+      display: flex; /* Center image within modal body */
+      justify-content: center;
+      align-items: center;
+    }
+    .modal-fullscreen img {
+      max-width: 100%; /* Ensure image doesn't exceed modal width */
+      max-height: 100%; /* Ensure image doesn't exceed modal height */
+      cursor: pointer; /* Make image clickable */
+    }
+
+    #management-division {
+        cursor:  pointer;
+    }
+
+    #dashboard-total-staff-tidak-terdata {
+  
+}
+
+
+#previewBody {
+  background: #000;
+}
+#previewBody img {
+  border: 3px solid #fff;
+}
+
+
+.modal-dialog-scrollable .modal-body {
+  max-height: calc(100vh - 200px); /* atur sesuai kebutuhan */
+  overflow-y: auto !important;
+}
+
+.staff-email, .staff-notes {
+    cursor: pointer;
+}
+
+.table td, .table th {
+  white-space: normal !important;
+  word-wrap: break-word;
 }

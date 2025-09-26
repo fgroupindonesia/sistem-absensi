@@ -1,3 +1,50 @@
+
+
+.kode-aktifasi {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+  }
+
+  .kode-aktifasi input {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-size: 1.5rem;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+  }
+
+    .kode-aktifasi input:focus {
+      border-color: #007bff;
+      box-shadow: 0 0 3px rgba(0,123,255,0.5);
+    }
+
+
+   @media screen and (max-width: 480px) {
+    .kode-aktifasi input {
+      width: 35px;
+      height: 35px;
+      font-size: 1.2rem;
+    }
+
+    h2, h4 {
+      font-size: 1.2rem;
+      text-align: center;
+    }
+
+    .btn-gold {
+      width: 100%;
+    }
+
+    .container {
+      padding: 1rem;
+    }
+  }
+  
+
 .container img, #final img {
 	display: block;
 	width: 64px;

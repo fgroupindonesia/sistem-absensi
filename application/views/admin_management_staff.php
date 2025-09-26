@@ -1,4 +1,8 @@
-<?php $rnum = "?" . rand(1000, 9999); ?>
+<?php
+ $rnum = "?" . rand(1000, 9999); 
+ // ini untuk memudahkan all Script JS bawahan
+echo "<script>var URL_MAIN_PORTAL = '". base_url() . "'; </script>";
+?>
 <!doctype html>
 <html lang="id">
   <head>
@@ -7,22 +11,29 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <title>Management Staff - Sistem Absensi Digital.</title>
     <!-- CSS files -->
-    <link href="/assets/css/tabler.min.css<?=$rnum?>" rel="stylesheet"/>
-    <link href="/assets/css/tabler-flags.min.css<?=$rnum?>" rel="stylesheet"/>
-    <link href="/assets/css/tabler-payments.min.css<?=$rnum?>" rel="stylesheet"/>
-    <link href="/assets/css/tabler-vendors.min.css<?=$rnum?>" rel="stylesheet"/>
-    <link href="/assets/css/demo.min.css<?=$rnum?>" rel="stylesheet"/>
-     <link href="/assets/css/custom-style.css<?=$rnum?>" rel="stylesheet"/>
+    <link href="<?=base_url();?>/assets/css/tabler.min.css<?=$rnum?>" rel="stylesheet"/>
+    <link href="<?=base_url();?>/assets/css/tabler-flags.min.css<?=$rnum?>" rel="stylesheet"/>
+    <link href="<?=base_url();?>/assets/css/tabler-payments.min.css<?=$rnum?>" rel="stylesheet"/>
+    <link href="<?=base_url();?>/assets/css/tabler-vendors.min.css<?=$rnum?>" rel="stylesheet"/>
+
+    <link href="<?=base_url();?>/assets/css/dataTables.dataTables.min.css<?=$rnum?>" rel="stylesheet"/>
+
+    
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+
+    <link href="<?=base_url();?>/assets/css/demo.min.css<?=$rnum?>" rel="stylesheet"/>
+     <link href="<?=base_url();?>/assets/css/custom-style.css<?=$rnum?>" rel="stylesheet"/>
+
 
     <style>
-      @import url('/assets/css/inter.css');
+      @import url('<?=base_url();?>/assets/css/inter.css');
       :root {
-      	--tblr-font-sans-serif: Inter, -apple-system, BlinkMacSystemFont, San Francisco, Segoe UI, Roboto, Helvetica Neue, sans-serif;
+        --tblr-font-sans-serif: Inter, -apple-system, BlinkMacSystemFont, San Francisco, Segoe UI, Roboto, Helvetica Neue, sans-serif;
       }
     </style>
   </head>
-  <body >
-    <script src="/assets/js/demo-theme.min.js<?=$rnum?>"></script>
+  <body data-token="<?= $public_token; ?>" >
+    <script src="<?=base_url();?>/assets/js/demo-theme.min.js<?=$rnum?>"></script>
     <div class="page">
       <!-- Navbar -->
        <?php include('header.php'); ?>
@@ -42,6 +53,7 @@
                   View All
                 </h2>
               </div>
+
               <!-- Page title actions -->
               <div class="col-auto ms-auto d-print-none">
                 <div class="btn-list">
@@ -52,18 +64,46 @@
                     Add New Staff
                   </button>
 
-                  <button id="btn-activate-staff" href="#" class="btn btn-primary d-none d-sm-inline-block" data-bs-toggle="modal" data-bs-target="#modal-activation">
-                    <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
-                    Activate Staff
+                   <?php if(!empty($data_staff) && is_array($data_staff)): ?>
+                   <button data-token="<?= $akses->getPublicToken(); ?>"  class="btn-delete-staff btn btn-danger d-none d-sm-inline-block" title="Delete">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-trash" width="24" height="24" viewBox="0 0 24 24"
+                           stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <line x1="4" y1="7" x2="20" y2="7"/>
+                        <line x1="10" y1="11" x2="10" y2="17"/>
+                        <line x1="14" y1="11" x2="14" y2="17"/>
+                        <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12"/>
+                        <path d="M9 7v-3h6v3"/>
+                      </svg>Delete
+                    </button>
+
+                  <?php endif; ?>
+                 
+                  <div class="dropdown d-sm-none">
+                  <button class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                    Actions
                   </button>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#modal-staff">Add New Staff</a>
+        
+                  <?php if(!empty($data_staff) && is_array($data_staff)): ?>
+
+                    <a data-token="<?= $akses->getPublicToken(); ?>" class="dropdown-item btn-delete-staff" >Delete</a>
+
+                  <?php endif; ?>  
+
+                  </div>
+                </div>
                  
                 </div>
               </div>
+
+
             </div>
           </div>
         
         </div>
+        
         <!-- Page body -->
         <div class="page-body">
 
@@ -73,146 +113,173 @@
               <div class="col-12">
                 <div class="card">
                   <div class="card-header">
-                    <h3 class="card-title">Data Staff Karyawan</h3>
+                    <h3 class="card-title">Data Seluruh Staff </h3>
                   </div>
                   <div class="card-body border-bottom py-3">
                     <div class="d-flex">
-                      <div class="text-muted">
-                        Show
-                        <div class="mx-2 d-inline-block">
-                          <input id="entry_limit" type="number" class="form-control form-control-sm" value="<?= $entry_limit; ?>" size="3" aria-label="Invoices count">
-                        </div>
-                        entries.
-                      </div>
-                      <div class="ms-auto text-muted">
-                        Search:
-                        <div class="ms-2 d-inline-block">
-                          <input type="text" class="form-control form-control-sm" aria-label="Search invoice">
-                        </div>
-                      </div>
+                    
                     </div>
-                  </div>
-                  <div class="table-responsive">
-                    <table class="table card-table table-vcenter text-nowrap datatable">
-                      <thead>
-                        <tr>
-                          <th class="w-1"><input class="form-check-input m-0 align-middle" type="checkbox" aria-label="Select all invoices"></th>
-                          <th class="w-1">No. <!-- Download SVG icon from http://tabler-icons.io/i/chevron-up -->
-                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-sm icon-thick" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><polyline points="6 15 12 9 18 15"></polyline></svg>
-                          </th>
-                          <th>Nama Staff</th>
-                          <th>Unit Divisi</th>
-                          <th>Kontak WA</th>
-                          <th>Email</th>
-                          <th>Status Aktif</th>
-                          <th>Catatan</th>
-                          <th></th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <!-- example data
-                        <tr>
-                          <td><input class="form-check-input m-0 align-middle" type="checkbox" aria-label="Select invoice"></td>
-                          <td><span class="text-muted">001401</span></td>
-                          <td><a href="invoice.html" class="text-reset" tabindex="-1">Udin Markudin</a></td>
-                          <td>
-                            <span class="flag flag-country-us"></span>
-                            IT Support
-                          </td>
-                          <td>
-                            0812-1222-1223
-                          </td>
-                          <td>
-                            udin@home.com
-                          </td>
-                          <td>
-                            <span class="badge bg-success me-1"></span> Bekerja
-                          </td>
-                          <td>-</td>
-                          <td class="text-end">
-                            <span class="dropdown">
-                              <button class="btn dropdown-toggle align-text-top" data-bs-boundary="viewport" data-bs-toggle="dropdown">Actions</button>
-                              <div class="dropdown-menu dropdown-menu-end">
-                                <a class="dropdown-item" href="#">
-                                  Action
-                                </a>
-                                <a class="dropdown-item" href="#">
-                                  Another action
-                                </a>
-                              </div>
-                            </span>
-                          </td>
-                        </tr> -->
-                      <?php if(is_array($data_staff)): ?>
-                        <?php foreach ($data_staff as $staff): ?>
-                        <tr  >
-                          <td><input class="form-check-input m-0 align-middle" type="checkbox" aria-label="Select invoice"></td>
-                          <td><span class="text-muted"><?= $staff->id; ?></span></td>
-                          <td><a href="invoice.html" class="text-reset" tabindex="-1"><?= $staff->name; ?></a></td>
-                          <td>
-                            <span class="flag flag-country-us"></span>
-                            <?= $staff->unit_division; ?>
-                          </td>
-                          <td>
-                            <?= $staff->whatsapp; ?>
-                          </td>
-                          <td>
-                            <?= $staff->email; ?>
-                          </td>
-                          <td>
-                            <span class="badge bg-success me-1"></span> <?= $staff->status; ?>
-                          </td>
-                          <td><?= $staff->notes; ?></td>
-                          <td class="text-end">
-                            <span class="dropdown">
-                              <button class="btn dropdown-toggle align-text-top" data-bs-boundary="viewport" data-bs-toggle="dropdown">Actions</button>
-                              <div class="dropdown-menu dropdown-menu-end">
-                                <a data-token="<?= $staff->public_token ;?>" data-id="<?= $staff->id; ?>" class="dropdown-item link-edit-staff" href="#" data-bs-toggle="modal" data-bs-target="#modal-loading">
-                                  Edit
-                                </a>
-                                <a data-id="<?= $staff->id; ?>" class="dropdown-item link-delete-staff" href="#" data-bs-toggle="modal" data-bs-target="#modal-loading">
-                                  Delete
-                                </a>
-                                  <a data-token="<?= $staff->public_token ;?>" data-id="<?= $staff->id; ?>" class="dropdown-item link-activate-staff" href="#" data-bs-toggle="modal" data-bs-target="#modal-loading">
-                                  Activate
-                                </a>
-                              </div>
-                            </span>
-                          </td>
-                        </tr>
-                      <?php endforeach; ?>
-                      <?php endif; ?>
-                      </tbody>
-                    </table>
-                  </div>
-                  <div class="card-footer d-flex align-items-center">
-                    <p class="m-0 text-muted">Showing <span>1</span> to <span>
-                      <?= $total_staff/$entry_limit; ?>
-                    </span> of <span id="entry-limit"><?= $total_staff; ?></span> entries</p>
-                    <ul class="pagination m-0 ms-auto">
-                      <li class="page-item disabled">
-                        <a class="page-link" href="#" tabindex="-1" aria-disabled="true">
-                          <!-- Download SVG icon from http://tabler-icons.io/i/chevron-left -->
-                          <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><polyline points="15 6 9 12 15 18"></polyline></svg>
-                          prev
-                        </a>
-                      </li>
 
-                  <?php if(isset($total_staff) && $total_staff!=0): ?>
-                    <?php for($index_page=0; $index_page<($total_staff/$entry_limit); $index_page++) {
-                      $element = '<li class="page-item"><a class="page-link" href="#">' . ($index_page+1) . '</a></li>';
-                      echo $element;
-                    } ?>
-                
-                  <?php endif; ?>
-                <li class="page-item">
-                    <a class="page-link" href="#">
-                          next <!-- Download SVG icon from http://tabler-icons.io/i/chevron-right -->
-                          <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><polyline points="9 6 15 12 9 18"></polyline></svg>
-                        </a>
-                      </li>
-                    </ul>
                   </div>
+                 <div class="table-responsive d-none d-md-block">
+  <table id="table-staff" class="table card-table table-vcenter text-nowrap datatable">
+    <thead>
+      <tr>
+        <th>
+          <input type="checkbox" value="all" class="form-check-input me-2 staff-all">
+        </th>
+        <th>No.</th>
+        <th>Nama Staff</th>
+        <th>Unit Divisi</th>
+        <th>Kontak WA</th>
+        <th>Email</th>
+        <th>Status</th>
+        <th>Device</th>
+        <th>Catatan</th>
+        <th>-</th>
+      </tr>
+    </thead>
+    <tbody>
+      <?php if (!empty($data_staff) && is_array($data_staff)): ?>
+        <?php $nomer=1; foreach ($data_staff as $staff): ?>
+          <tr class="staff-row">
+            <td><input type="checkbox" data-name="<?=$staff->name; ?>" value="<?=$staff->id; ?>" class="form-check-input me-2 staff-id"></td>
+            <td><?= $nomer++; ?></td>
+            <td><?= $staff->name; ?></td>
+            <td><?= $staff->unit_division; ?></td>
+            <td><?= $staff->whatsapp; ?></td>
+            <td>
+              <i class="fa-solid fa-envelope" data-email="<?= $staff->email; ?>"></i>
+            </td>
+            <td>
+              <?php if($staff->status == 'active') : ?>
+                <span class="badge bg-success"><?= $staff->status; ?></span>
+              <?php else : ?>
+                <span class="badge bg-secondary"><?= $staff->status; ?></span>
+              <?php endif; ?>
+            </td>
+             <?php if($staff->device_tag != null) : ?>
+                <td>Installed</td>
+              <?php else : ?>
+                <td>-</td>
+            <?php endif; ?>
+            <td><?= $staff->notes; ?></td>
+            <td class="text-end">
+              <div class="dropdown">
+                <button class="btn dropdown-toggle" data-bs-toggle="dropdown">Actions</button>
+                <div class="dropdown-menu dropdown-menu-end">
+                  <a data-bs-toggle="modal" data-bs-target="#modal-staff" data-id="<?= $staff->id; ?>" data-token="<?= $staff->public_token; ?>" class="dropdown-item link-edit-staff" href="#">Edit</a>
+                  
+                  <?php if($staff->status != 'active') : ?>
+                    <a data-id="<?= $staff->id; ?>" data-token="<?= $staff->public_token; ?>" class="dropdown-item link-activate-staff" href="#" data-type="activate" >Activate</a>
+                  <?php endif; ?>
+
+                  <?php if($staff->status == 'active') : ?>
+                    <a data-id="<?= $staff->id; ?>" data-token="<?= $staff->public_token; ?>" class="dropdown-item link-activate-staff" href="#">Turn Off</a>
+                  <?php endif; ?>
+
+                  <a data-id="<?= $staff->id; ?>" data-token="<?= $staff->public_token; ?>" class="dropdown-item link-delete-staff" href="#">Delete</a>
+
+                </div>
+              </div>
+            </td>
+          </tr>
+        <?php endforeach; ?>
+      <?php endif; ?>
+      
+    </tbody>
+  </table>
+
+</div>
+
+
+
+
+<!-- versi mobile: card -->
+<div class="d-block d-md-none">
+
+<input type="text" id="search-card" class="form-control mb-3" placeholder="Cari staff...">
+
+  <div class="row" id="card-staff-container">
+    <?php if (!empty($data_staff) && is_array($data_staff)): ?>
+      <?php foreach ($data_staff as $staff): ?>
+        <div class="col-12 mb-3 staff-card">
+          <div class="card">
+
+            <div class="card-body">
+              <div class="d-flex align-items-center mb-2">
+                <input type="checkbox" data-name="<?=$staff->name; ?>" value="<?=$staff->id; ?>" class="form-check-input me-2 staff-id">
+                <h3 class="card-title staff-name mb-0">
+                  Nama : <?= $staff->name; ?>
+                </h3>
+              </div>
+
+              <p class="text-muted mb-1 staff-division"><strong>Divisi:</strong> <?= $staff->unit_division; ?></p>
+              <p class="mb-1"><i class="fa-brands fa-whatsapp"></i> <?= $staff->whatsapp; ?></p>
+              <p class="mb-1"><i class="fa-solid fa-envelope"></i> <?= $staff->email; ?></p>
+              <p class="mb-1">
+                <span class="badge <?= $staff->status=='active'?'bg-success':'bg-secondary'; ?>">
+                  <?= $staff->status; ?>
+                </span>
+              </p>
+              <p class="text-muted mb-1 staff-device-tag"><strong>Device:</strong> <?= $staff->device_tag ?? '-'; ?></p>
+
+              <p class="mb-2"><strong>Catatan:</strong> <?= $staff->notes; ?></p>
+              <div class="btn-group w-100">
+               <a href="#" 
+                 data-bs-toggle="modal" data-bs-target="#modal-staff" 
+                   class="btn btn-sm btn-outline-primary link-edit-staff" 
+                   data-id="<?= $staff->id; ?>" 
+                   data-token="<?= $staff->public_token; ?>">
+                   Edit
+                </a>
+
+                <a href="#" 
+                   class="btn btn-sm btn-outline-danger link-delete-staff" 
+                   data-id="<?= $staff->id; ?>" 
+                   data-token="<?= $staff->public_token; ?>">
+                   Delete
+                </a>
+
+                <?php if($staff->device_tag != null) : ?>
+                  <a href="#" 
+                     class="btn btn-sm btn-outline-success link-reset-device-staff" 
+                     data-id="<?= $staff->id; ?>" 
+                     data-token="<?= $staff->public_token; ?>" 
+                     data-type="reset">
+                     Reset
+                  </a>
+               
+                <?php endif; ?>
+
+                <?php if($staff->status != 'active') : ?>
+                  <a href="#" 
+                     class="btn btn-sm btn-outline-success link-activate-staff" 
+                     data-id="<?= $staff->id; ?>" 
+                     data-token="<?= $staff->public_token; ?>" 
+                     data-type="activate">
+                     Activate
+                  </a>
+                <?php else: ?>
+                  <a href="#" 
+                     class="btn btn-sm btn-outline-warning link-activate-staff" 
+                     data-id="<?= $staff->id; ?>" 
+                     data-token="<?= $staff->public_token; ?>" >
+                     Turn Off
+                  </a>
+                <?php endif; ?>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      <?php endforeach; ?>
+    <?php endif; ?>
+  </div>
+</div>
+
+                 
                 </div>
               </div>
             </div>
@@ -222,14 +289,27 @@
        <?php include('footer.php'); ?>
       </div>
     </div>
-    <?php include('popup-modals.php'); ?>
+
+    <?php include('modal_bugs.php'); ?>
+    <?php include('modal_staff.php'); ?>
+    <?php include('modal_checkpoint.php'); ?>
+    <?php include('modal_konsultasi.php'); ?>
+    <?php include('modal_divisi.php'); ?>
+
+
+
     <!-- Libs JS -->
     <!-- Tabler Core -->
-    <script src="/assets/js/tabler.min.js<?=$rnum?>" defer></script>
-    <script src="/assets/js/demo.min.js<?=$rnum?>" defer></script>
-     <script src="/assets/js/jquery-3.3.1.min.js<?=$rnum?>" defer></script>
-     <!-- <script src="/assets/js/bootstrap.bundle.min.js<?=$rnum?>" defer></script> -->
-     <script src="/assets/js/form-actions.js<?=$rnum?>" defer></script>
+    <script src="<?=base_url();?>assets/js/tabler.min.js<?=$rnum?>" defer></script>
+    <script src="<?=base_url();?>assets/js/demo.min.js<?=$rnum?>" defer></script>
+     <script src="<?=base_url();?>assets/js/jquery-3.3.1.min.js<?=$rnum?>" ></script>
+     
+     <script src="<?=base_url();?>assets/js/dataTables.min.js<?=$rnum?>" ></script>     
+     <script src="<?=base_url();?>assets/js/sweetalert2@11.js<?=$rnum?>" ></script>
+     <script src="<?=base_url();?>assets/js/form-actions.js<?=$rnum?>" ></script>
+     <script src="<?=base_url();?>assets/js/division-works.js<?=$rnum?>" ></script>     
+     <script src="<?=base_url();?>assets/js/staff-works.js<?=$rnum?>" ></script>     
+
 
   </body>
 </html>

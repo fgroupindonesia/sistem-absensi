@@ -1,0 +1,85 @@
+_step_by_step_installation
+
+npm install -g cordova
+cordova create myapp
+cd myapp
+cordova platform add android
+cordova prepare
+cordova build android
+
+--- check di folder
+rootApp\android\app\build\outputs\apk
+
+---- atau klo ada adb device maka:
+dengan USB terpasang kita tinggal :
+
+cordova run android --device
+
+
+-----------------
+Kalo mo rename Apps / Package name:
+
+1) jalankan command :
+	cordova platform rm android
+2) delete folder android di root project
+3) jalankan lagi :
+	cordova platform add android
+	cordova prepare
+	cordova build android
+	
+4) test via alat langsung colok USB:
+	cordova run android --device
+
+
+-----------------
+Kalo mo buat APK untuk di Playstore
+
+keytool -genkey -v -keystore my-release-key.keystore -alias sistemkehadiranabsensi -keyalg RSA -keysize 2048 -validity 10000
+
+gradlew.bat assembleRelease
+
+jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore my-release-key.keystore D:/project-2024/java-android/Sistem-Kehadiran-Absensi/android/app/build/outputs/apk/release/app-release-unsigned.apk sistemkehadiranabsensi
+
+zipalign -v 4 D:/project-2024/java-android/Sistem-Kehadiran-Absensi/android/app/build/outputs/apk/release/app-release-unsigned.apk D:/project-2024/java-android/Sistem-Kehadiran-Absensi/android/app/build/outputs/apk/release/app-release.apk
+
+apksigner sign --ks D:/project-2024/java-android/Sistem-Kehadiran-Absensi/android/app/my-release-key.keystore --out D:/project-2024/java-android/Sistem-Kehadiran-Absensi/android/app/build/outputs/apk/release/app-release-signed.apk D:/project-2024/java-android/Sistem-Kehadiran-Absensi/android/app/build/outputs/apk/release/app-release.apk
+
+
+------
+replace Java Compiler
+
+di sublime saat buka project 
+FIND :
+
+JavaVersion.VERSION_21
+
+
+replace ALL : *sesuai versi kita
+
+JavaVersion.VERSION_17
+
+------------------
+KALO mo buat ICON: masukkin aja PNG trus ambil code HTML dan Zip nya 
+dari 
+https://iconifier.net/
+
+ke project lu, sesuaikan pathnya!
+
+--------------
+saat testing install dulu whitelist http mixed https access
+
+install dulu https di local xampp
+
+
+--------------
+Kalo mo buat iconic di cordova
+1) install dulu command nya:
+npm install -g cordova-res
+
+2) simpen file icon.png dan splash.png di folder resources\
+
+3) execute : 
+cordova-res android --skip-config --copy
+
+4) otomatis ntar ada folder 'resources\android'
+dengan sluruh ukurannya!

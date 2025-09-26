@@ -10,22 +10,22 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="/assets/img/favicon.ico" rel="icon">
-  <link href="/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="<?=base_url();?>/assets/img/favicon.ico" rel="icon">
+  <link href="<?=base_url();?>/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
-  <link href="/assets/css/fonts-googleapis.css" rel="stylesheet">
+  <link href="<?=base_url();?>/assets/css/fonts-googleapis.css" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="/assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="<?=base_url();?>/assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="<?=base_url();?>/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="<?=base_url();?>/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="<?=base_url();?>/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="<?=base_url();?>/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="<?=base_url();?>/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="/assets/css/style-landing-page.css" rel="stylesheet">
+  <link href="<?=base_url();?>/assets/css/style-landing-page.css" rel="stylesheet">
 
  </head>
 
@@ -36,7 +36,7 @@
     <div class="container d-flex align-items-center">
 
       <div class="logo me-auto">
-        <h1><a href="index.html">kehadiran</a></h1>
+        <h1><a href="<?=base_url(); ?>">kehadiran</a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
       </div>
@@ -56,7 +56,7 @@
          
           <li><a class="nav-link scrollto" href="#pricing">Pilihan Paket</a></li>
           <li><a class="nav-link scrollto" href="#contact">Hubungi Kami</a></li>
-           <li><a class="nav-link scrollto" href="/portal/admin">Portal</a></li>
+           <li><a class="nav-link scrollto" href="<?=base_url();?>portal/admin">Portal</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -78,13 +78,14 @@
       <div class="row">
         <div class="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center" data-aos="fade-up">
           <div>
-            <h1>Ingin kehadiran lebih transparan?</h1>
-            <h2>Dengan kombinasi kehadiran dan fitur pengelolaan yang mudah anda kini menjadi semakin bahagia!</h2>
-            <a href="/portal/register" class="btn-get-started scrollto">Daftar Sekarang</a>
+            <h1>Ingin kontrol kehadiran karyawan lebih efisien?</h1>
+<h2>Gunakan sistem absensi online kami untuk pengelolaan yang praktis, hemat waktu, dan bantu bisnis Anda berkembang lebih cepat!</h2>
+
+            <a href="<?= base_url();?>portal/register" class="btn-get-started scrollto">Daftar Sekarang</a>
           </div>
         </div>
         <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="fade-left">
-          <img src="/assets/img/hero-img.png" class="img-fluid" alt="">
+          <img src="<?=base_url();?>/assets/img/hero-img.png" class="img-fluid" alt="">
         </div>
       </div>
     </div>
@@ -99,7 +100,7 @@
 
         <div class="row">
           <div class="col-lg-6" data-aos="zoom-in">
-            <img src="/assets/img/about.jpg" class="img-fluid" alt="">
+            <img src="<?=base_url();?>/assets/img/about.jpg" class="img-fluid" alt="">
           </div>
           <div class="col-lg-6 d-flex flex-column justify-contents-center" data-aos="fade-left">
             <div class="content pt-4 pt-lg-0">
@@ -113,7 +114,9 @@
                 <li><i class="bi bi-check-circle"></i> Hemat SDM Impian para pemilik bisnis.</li>
               </ul>
               <p>
-                Bagi kamu yang ingin mencoba gratis bersegeralah untuk mendaftar sebelum Tanggal LIMIT.
+                <b>Notes*:</b> <br>
+                Bagi kamu yang ingin mencoba gratis bersegeralah untuk mendaftar sebelum <b id="tanggal-limit">Tanggal LIMIT</b>. Sekarang tinggal <span id="count-time">
+                <b id="jam-sisa">0</b> jam, <b id="menit-sisa">0</b> menit, <b id="detik-sisa">0</b> detik lagi. Waktu akan cepat Habis...</span>
               </p>
             </div>
           </div>
@@ -127,9 +130,10 @@
       <div class="container">
 
         <div class="row">
-          <div class="col-lg-6 mt-2 mb-tg-0 order-2 order-lg-1">
+          <div data-aos="fade-up" class="col-lg-6 mt-2 mb-tg-0 order-2 order-lg-1">
+             <h4>Hanya Disini!</h4>
             <ul class="nav nav-tabs flex-column">
-              <li class="nav-item" data-aos="fade-up">
+              <li class="nav-item" >
                 <a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">
                   <h4>Keamanan Terbaik</h4>
                   <p>Dengan dashboard khusus terancang dengan keamanan data kehadiran terbaik!</p>
@@ -159,22 +163,22 @@
             <div class="tab-content">
               <div class="tab-pane active show" id="tab-1">
                 <figure>
-                  <img src="/assets/img/features-1.png" alt="" class="img-fluid">
+                  <img src="<?=base_url();?>/assets/img/features-1.png" alt="" class="img-fluid">
                 </figure>
               </div>
               <div class="tab-pane" id="tab-2">
                 <figure>
-                  <img src="/assets/img/features-2.png" alt="" class="img-fluid">
+                  <img src="<?=base_url();?>/assets/img/features-2.png" alt="" class="img-fluid">
                 </figure>
               </div>
               <div class="tab-pane" id="tab-3">
                 <figure>
-                  <img src="/assets/img/features-3.png" alt="" class="img-fluid">
+                  <img src="<?=base_url();?>/assets/img/features-3.png" alt="" class="img-fluid">
                 </figure>
               </div>
               <div class="tab-pane" id="tab-4">
                 <figure>
-                  <img src="/assets/img/features-4.png" alt="" class="img-fluid">
+                  <img src="<?=base_url();?>/assets/img/features-4.png" alt="" class="img-fluid">
                 </figure>
               </div>
             </div>
@@ -269,7 +273,7 @@
                   Sistem kehadiran web ini telah membawa transparansi dalam proses kehadiran. Karyawan dapat dengan mudah mengakses dan memverifikasi catatan kehadiran mereka sendiri, menciptakan lingkungan kerja yang lebih terbuka dan akuntabel.
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
-                <img src="/assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+                <img src="<?=base_url();?>/assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
                 <h3>Kartinah Sari</h3>
                 <h4>OLShop Kartinah</h4>
               </div>
@@ -282,7 +286,7 @@
                   Fitur integrasi dengan sistem lainnya membuat manajemen sumber daya manusia menjadi lebih efisien. Sistem ini secara otomatis menyinkronkan data kehadiran dengan platform lainnya, menghemat waktu dan mengurangi risiko kesalahan manusiawi.
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
-                <img src="/assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+                <img src="<?=base_url();?>/assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
                 <h3>Nina Safitri</h3>
                 <h4>Freelancer UpWork</h4>
               </div>
@@ -295,7 +299,7 @@
                   Sebagai pengguna baru, saya sangat senang dengan dukungan pelanggan yang diberikan. Tim dukungan sangat responsif dan membantu kami dengan setiap pertanyaan atau kendala yang kami hadapi selama implementasi.
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
-                <img src="/assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
+                <img src="<?=base_url();?>/assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
                 <h3>Iwan Saputra</h3>
                 <h4>Karyawan Wiraswasta</h4>
               </div>
@@ -308,7 +312,7 @@
                  Saya terkesan dengan fitur pelaporan yang canggih. Dengan sistem ini, kami dapat dengan mudah menganalisis data kehadiran, memonitor keterlambatan, dan membuat keputusan strategis untuk meningkatkan manajemen karyawan.
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
-                <img src="/assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
+                <img src="<?=base_url();?>/assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
                 <h3>Pa Ahmat Sandi</h3>
                 <h4>CV. Bangunan Tegas</h4>
               </div>
@@ -321,7 +325,7 @@
                   Pilihan sistem kehadiran web ini memberikan fleksibilitas luar biasa. Kami dapat mengaksesnya dari mana saja, memudahkan kami untuk melacak kehadiran karyawan bahkan saat bepergian.
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
-                <img src="/assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
+                <img src="<?=base_url();?>/assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
                 <h3>Joni Kurniawan</h3>
                 <h4>Entrepreneur</h4>
               </div>
@@ -347,7 +351,7 @@
 
           <div class="col-lg-4 col-md-6">
             <div class="member" data-aos="zoom-in">
-              <div class="pic"><img src="/assets/img/team/team-1.jpg" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="<?=base_url();?>/assets/img/team/team-1.jpg" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>Triawan Munaf</h4>
                 <span>Head of Bekraf</span>
@@ -363,7 +367,7 @@
 
           <div class="col-lg-4 col-md-6">
             <div class="member" data-aos="zoom-in" data-aos-delay="100">
-              <div class="pic"><img src="/assets/img/team/team-2.jpg" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="<?=base_url();?>/assets/img/team/team-2.jpg" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>Pevita Pearce</h4>
                 <span>Artist</span>
@@ -379,7 +383,7 @@
 
           <div class="col-lg-4 col-md-6">
             <div class="member" data-aos="zoom-in" data-aos-delay="200">
-              <div class="pic"><img src="/assets/img/team/team-3.jpg" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="<?=base_url();?>/assets/img/team/team-3.jpg" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>Benny Moza</h4>
                 <span>Content Creator</span>
@@ -410,49 +414,49 @@
 
           <div class="col-lg-3 col-md-4 col-xs-6">
             <div class="client-logo" data-aos="zoom-in">
-              <img src="/assets/img/clients/client-1.png" class="img-fluid" alt="">
+              <img src="<?=base_url();?>/assets/img/clients/client-1.png" class="img-fluid" alt="">
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4 col-xs-6">
             <div class="client-logo" data-aos="zoom-in" data-aos-delay="100">
-              <img src="/assets/img/clients/client-2.png" class="img-fluid" alt="">
+              <img src="<?=base_url();?>/assets/img/clients/client-2.png" class="img-fluid" alt="">
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4 col-xs-6">
             <div class="client-logo" data-aos="zoom-in" data-aos-delay="150">
-              <img src="/assets/img/clients/client-3.png" class="img-fluid" alt="">
+              <img src="<?=base_url();?>/assets/img/clients/client-3.png" class="img-fluid" alt="">
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4 col-xs-6">
             <div class="client-logo" data-aos="zoom-in" data-aos-delay="200">
-              <img src="/assets/img/clients/client-4.png" class="img-fluid" alt="">
+              <img src="<?=base_url();?>/assets/img/clients/client-4.png" class="img-fluid" alt="">
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4 col-xs-6">
             <div class="client-logo" data-aos="zoom-in" data-aos-delay="250">
-              <img src="/assets/img/clients/client-5.png" class="img-fluid" alt="">
+              <img src="<?=base_url();?>/assets/img/clients/client-5.png" class="img-fluid" alt="">
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4 col-xs-6">
             <div class="client-logo" data-aos="zoom-in" data-aos-delay="300">
-              <img src="/assets/img/clients/client-6.png" class="img-fluid" alt="">
+              <img src="<?=base_url();?>/assets/img/clients/client-6.png" class="img-fluid" alt="">
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4 col-xs-6">
             <div class="client-logo" data-aos="zoom-in" data-aos-delay="350">
-              <img src="/assets/img/clients/client-7.png" class="img-fluid" alt="">
+              <img src="<?=base_url();?>/assets/img/clients/client-7.png" class="img-fluid" alt="">
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4 col-xs-6" data-aos="zoom-in" data-aos-delay="400">
             <div class="client-logo">
-              <img src="/assets/img/clients/client-8.png" class="img-fluid" alt="">
+              <img src="<?=base_url();?>/assets/img/clients/client-8.png" class="img-fluid" alt="">
             </div>
           </div>
 
@@ -484,7 +488,7 @@
                 <li class="na">GPS Report</li>
               </ul>
               <div class="btn-wrap">
-                <a href="/portal/register?type=gratis" class="btn-buy">Daftarkan Sekarang</a>
+                <a href="<?=base_url();?>portal/register?type=gratis" class="btn-buy">Daftarkan Sekarang</a>
               </div>
             </div>
           </div>
@@ -502,7 +506,7 @@
                 <li class="na">Notifikasi Whatsapp</li>
               </ul>
               <div class="btn-wrap">
-                <a href="/portal/register?type=sederhana" class="btn-buy">Daftarkan Sekarang</a>
+                <a href="<?=base_url();?>portal/register?type=sederhana" class="btn-buy">Daftarkan Sekarang</a>
               </div>
             </div>
           </div>
@@ -523,7 +527,7 @@
                 <li class="na">Integrasi Mobile</li>
               </ul>
               <div class="btn-wrap">
-                <a href="/portal/register?type=developer" class="btn-buy">Daftarkan Sekarang</a>
+                <a href="<?=base_url();?>portal/register?type=developer" class="btn-buy">Daftarkan Sekarang</a>
               </div>
             </div>
           </div>
@@ -545,7 +549,7 @@
                 <li>Integrasi Mobile</li>
               </ul>
               <div class="btn-wrap">
-                <a href="/portal/register?type=ultimate" class="btn-buy">Daftarkan Sekarang</a>
+                <a href="<?=base_url();?>portal/register?type=ultimate" class="btn-buy">Daftarkan Sekarang</a>
               </div>
             </div>
           </div>
@@ -593,10 +597,10 @@
           </li>
 
           <li>
-            <div data-bs-toggle="collapse" href="#faq4" class="collapsed question">Apakah memerlukan pengumpulan data SIUP / NPWP dan legalitas lainnya? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+            <div data-bs-toggle="collapse" href="#faq4" class="collapsed question">Apakah Saya perlu mengumpulkan data SIUP / NPWP dan legalitas lainnya? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
             <div id="faq4" class="collapse" data-bs-parent=".faq-list">
               <p>
-                Tidak perlu! Kami memudahkan proses ini hanya dengan memberikan akses pendaftaran yang paling mudah via form secara online tanpa menyertakan dokumentasi legalitas yang penting milik tiap akun yang akan menggunakan sistem kehadiran ini.
+                Tidak perlu! Proses ini sangat mudah, dan tidak ribet! Anda cukupmengisi pendaftaran via form dan sudah bisa mendapatkan akses secara online tanpa menyertakan dokumentasi yang ribet, so simple kan?
               </p>
             </div>
           </li>
@@ -773,16 +777,16 @@ Ujung Berung,<br>Bandung 40614, Jawa Barat.</p>
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
-  <script src="/assets/vendor/aos/aos.js"></script>
-  <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="/assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="/assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="<?=base_url();?>/assets/vendor/aos/aos.js"></script>
+  <script src="<?=base_url();?>/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="<?=base_url();?>/assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="<?=base_url();?>/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="<?=base_url();?>/assets/vendor/swiper/swiper-bundle.min.js"></script>
 
   <!-- Template Main JS File -->
-  <script src="/assets/js/main.js"></script>
-  <script src="/assets/js/jquery-3.7.1.min.js"></script>
-  <script src="/assets/js/landing-page.js"></script>
+  <script src="<?=base_url();?>/assets/js/main.js"></script>
+  <script src="<?=base_url();?>/assets/js/jquery-3.7.1.min.js"></script>
+  <script src="<?=base_url();?>/assets/js/landing-page.js"></script>
 
 </body>
 

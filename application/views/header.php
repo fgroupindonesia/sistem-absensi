@@ -4,7 +4,7 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <h1 class="navbar-brand navbar-brand-autodark d-none-navbar-horizontal pe-0 pe-md-3">
-            Sistem Kehadiran
+            Sistem Kehadiran &amp; Absensi
           </h1>
           <div class="navbar-nav flex-row order-md-last">
             <div class="nav-item d-none d-md-flex me-3">
@@ -115,19 +115,33 @@
             </div>
             <div class="nav-item dropdown">
               <a href="#" class="nav-link d-flex lh-1 text-reset p-0" data-bs-toggle="dropdown" aria-label="Open user menu">
-                <img class="avatar avatar-sm" src="/assets/img/avatars/<?= $this->akses->getAvatar() ;?>">
+                <img class="avatar avatar-sm" src="<?=base_url();?>/assets/img/avatars/<?= $this->akses->getAvatar() ;?>">
                 <div class="d-none d-xl-block ps-2">
                   <div><?= $this->akses->getUsername(); ?></div>
                   <div class="mt-1 small text-muted"><?= $this->akses->getUserType(); ?></div>
                 </div>
               </a>
+              
+              <?php if($akses->isCompany()): ?>
               <div class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
                 <a href="#" data-bs-toggle="modal" data-bs-target="#modal-bugs" class="dropdown-item">Laporkan Bugs</a>
                 <a href="#" data-bs-toggle="modal" data-bs-target="#modal-konsultasi" class="dropdown-item">Ajukan Konsultasi</a>
                 <div class="dropdown-divider"></div>
-                <a href="/portal/settings" class="dropdown-item">Settings</a>
-                <a href="/portal/admin/logout" class="dropdown-item">Logout</a>
+                <a href="<?=base_url(); ?>portal/settings" class="dropdown-item">Settings</a>
+                <a href="<?=base_url(); ?>portal/history/all" class="dropdown-item">Riwayat Penting</a>
+                <a href="<?=base_url(); ?>portal/admin/logout" class="dropdown-item">Logout</a>
               </div>
+
+            <?php else : ?>
+
+              <div class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+              
+                <a href="<?=base_url(); ?>portal/settings" class="dropdown-item">Settings</a>
+                <a href="<?=base_url(); ?>portal/superadmin/logout" class="dropdown-item">Logout</a>
+              </div>
+
+            <?php endif; ?>
+
             </div>
           </div>
         </div>

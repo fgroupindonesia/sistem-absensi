@@ -31,3 +31,53 @@ $(document).ready(function() {
     });
 
 });
+
+
+const now = new Date();
+const target_date = new Date(now);
+
+target_date.setDate(now.getDate() + 1);
+
+function timer_tanggal_limit(){
+
+    let monthNames = [
+  "Januari", "Februari", "Maret", "April", "Mei", "Juni",
+  "Juli", "Agustus", "September", "Oktober", "November", "Desember"
+];
+
+    let dd = String(target_date.getDate()).padStart(2,'0');
+    let mm = target_date.getMonth()
+    let yyyy = target_date.getFullYear();
+
+    let namaBulan = monthNames[mm];
+
+    let tgl_terakhir = `${dd}-${namaBulan}-${yyyy}`;
+    $('#tanggal-limit').text(tgl_terakhir);
+
+}
+
+function update_timer_limit(){
+    let now = new Date();
+    let diff = target_date - now;
+
+
+    if(diff <= 0){
+        $('#count-time').text('Habis!');
+        clearInterval(timer);
+
+        return;
+    }
+
+    let jam = Math.floor(diff/1000/60/60);
+    let menit = Math.floor((diff/1000/60)%60);
+    let detik = Math.floor((diff/1000)%60);
+
+    $('#jam-sisa').text(jam);
+    $('#menit-sisa').text(menit);
+    $('#detik-sisa').text(detik);
+
+}
+
+update_timer_limit();
+timer_tanggal_limit();
+let timer = setInterval(update_timer_limit, 1000);

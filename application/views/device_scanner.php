@@ -1,27 +1,31 @@
 <!DOCTYPE html>
 <?php // randomizer
 $v = "?" . time();
+
 ?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="theme-color" content="#ffffff">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Absensi - FGroupIndonesia</title>
-	<script src="/assets/js/jquery.slim.min.js<?= $v ;?>" ></script>
-	<script src="/assets/js/bootstrap.bundle.min.js<?= $v ;?>" ></script>
-	<script src="/assets/js/jquery-3.3.1.min.js<?= $v ;?>" ></script>
-	<script src="/assets/js/works-device.js<?= $v ;?>" ></script>
-	<script src="/assets/js/jsQR.js<?= $v ;?>"></script>
-	<link rel="stylesheet" href="/assets/css/bootstrap.min.css<?= $v ;?>" >
-	<link rel="stylesheet" href="/assets/css/style.css<?= $v ;?>" >
-	<link rel="icon" type="image/x-icon" href="/assets/img/favicon.ico">
+	
+	
+	<script src="<?=base_url();?>/assets/js/jquery-3.3.1.min.js<?= $v ;?>" ></script>
+	<script src="<?=base_url();?>/assets/js/bootstrap.bundle.min.js<?= $v ;?>" ></script>
+	<?= "<script> const URL_MAIN_PORTAL = '". base_url() . "'; </script>"; ?> 	
+	<script src="<?=base_url();?>/assets/js/jsQR.js<?= $v ;?>"></script>
+	<script src="<?=base_url();?>/assets/js/works-device.js<?= $v ;?>" ></script>
+	<link rel="stylesheet" href="<?=base_url();?>/assets/css/bootstrap.min.css<?= $v ;?>" >
+	<link rel="stylesheet" href="<?=base_url();?>/assets/css/style.css<?= $v ;?>" >
+	<link rel="icon" type="image/x-icon" href="<?=base_url();?>/assets/img/favicon.ico">
 </head>
 
 <body>
 	<div id="page0" class="container">
 		<h2> Portal Absensi </h2>
 		<h4>Loading...</h4>
-		<img src="/assets/img/loading.gif" />
+		<img src="<?=base_url();?>/assets/img/loading.gif" />
 		
 	</div>
 
@@ -36,7 +40,7 @@ $v = "?" . time();
 	<div id="page2" class="container">
 		<h2> Portal Absensi </h2>
 		<h4>Loading...</h4>
-		<img src="/assets/img/loading.gif" />
+		<img src="<?=base_url();?>/assets/img/loading.gif" />
 		
 	</div>
 
@@ -52,28 +56,28 @@ $v = "?" . time();
 				<div id="overlay-camera">
 					<div id="coloring-camera"></div>
 				</div>
-				<video id="video" autoplay playsinline crossorigin="anonymous"></video>
+				<video id="video" muted autoplay playsinline ></video>
 				<img id="screenshot" alt="Screenshot">
 
 			 </div>
 			   <span id="coordinates" ></span>
 
 			</div>
-				<audio id="click-sound" src="/assets/audio/beep.mp3"></audio>
+				<audio id="click-sound" src="<?=base_url();?>/assets/audio/beep.mp3"></audio>
 
 	</div>
 
 	<div id="page4" class="container">
 		<h2> Portal Absensi </h2>
 		<h4>Loading...</h4>
-		<img src="/assets/img/loading.gif" />
+		<img src="<?=base_url();?>/assets/img/loading.gif" />
 		
 	</div>
 
 	<div id="page5" class="container">
 		<h2> Portal Absensi </h2>
 		<h4>Sukses!</h4>
-		<img src="/assets/img/complete.png" />
+		<img src="<?=base_url();?>/assets/img/complete.png" />
 		
 			<input type="button"  class="btn-gold btn-continue" value="Lanjut" />
 		
@@ -82,7 +86,7 @@ $v = "?" . time();
 	<div id="page6" class="container">
 		<h2> Portal Absensi </h2>
 		<h4>Gagal!</h4>
-		<img src="/assets/img/error.png" />
+		<img src="<?=base_url();?>/assets/img/failed.png" />
 		
 			<input type="button"  class="btn-gold btn-continue" value="Ulangi" />
 		
@@ -90,7 +94,7 @@ $v = "?" . time();
 
 	<div id="exit" class="container">
 		<h2> Portal Absensi </h2>
-			<img src="/assets/img/bye.gif" />
+			<img src="<?=base_url();?>/assets/img/bye.gif" />
 			<label> Selamat berjumpa kembali nanti! </label>
 			<p >autoclose dalam <span class="detik">5 detik. </span></p>
 	</div>
